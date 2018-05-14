@@ -35,7 +35,6 @@
         <file>images/play.png</file>
         <file>qml/pages/CalendarPage/Etat2.qml</file>
         <file>qml/pages/ConfigurationPage/Etat2.qml</file>
-        <file>qml/pages/CalendarPage/Etat3.qml</file>
         <file>images/icon/calendar_gris.png</file>
         <file>qml/modules/TabItem.qml</file>
         <file>images/icon/clients_gris.png</file>
@@ -46,5 +45,22 @@
         <file>qml/modules/Logo.qml</file>
         <file>images/logo-clconseils.png</file>
         <file>qml/modules/MyCalendar.qml</file>
+        <file>qml/modules/ErrorBox.qml</file>
+        <file>qml/modules/InputBox.qml</file>
+        <file>qml/modules/MyButton.qml</file>
+        <file>qml/modules/TextEditBox.qml</file>
+        <file>images/eventindicator.png</file>
+        <file>qml/modules/TextBox.qml</file>
+        <file>qml/modules/MyModel.qml</file>
+        <file>qml/pages/CalendarPage/EventList.qml</file>
+        <file>qml/pages/CalendarPage/EventModel.qml</file>
+        <file>images/icon/calendar_or.png</file>
+        <file>images/icon/clients_or.png</file>
+        <file>images/icon/config_or.png</file>
+        <file>images/icon/home_or.png</file>
+        <file>images/icon/itinerary_or.png</file>
+        <file>images/icon/map_or.png</file>
+        <file>qml/modules/ListButtonDelete.qml</file>
+        <file>images/icon/delete.png</file>
     </qresource>
 </RCC>

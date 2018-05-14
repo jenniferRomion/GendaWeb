@@ -8,7 +8,7 @@ TabButton {
     property int index : 0
     property string imgsource : ""
 
-    background: Rectangle { color : root.currentIndex == index ? "grey" : "white" }
+    background: Rectangle { color : root.currentIndex == index ? "#EDECE0" : "white" }
     Image {
         source: imgsource
 

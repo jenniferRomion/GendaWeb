@@ -27,6 +27,10 @@ ApplicationWindow {
 
     title: "GendaWeb"
 
+    SystemPalette {
+        id: systemPalette
+    }
+
     header: MyToolBar {
         id: tabBar
     }

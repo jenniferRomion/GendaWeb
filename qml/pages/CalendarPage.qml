@@ -9,24 +9,30 @@ import "CalendarPage"
 Page {
     id : calendarPage
 
-    property bool calendar_visibility: true
+    property bool calendar1_visibility: true
+    property bool calendar2_visibility: false
+    property string clientName :""
+    property string clientRdv : ""
+    property string rdvTime : "00:00"
+    property var currentDate : new Date()
 
 
-    header: Label {
-        text: qsTr("Planning")
-        font.pixelSize: Qt.application.font.pixelSize * 2
-        font.family: "acumin-pro"
-        padding: 10
-    }
+
+//    header: Label {
+//        text: qsTr("Planning")
+//        font.pixelSize: Qt.application.font.pixelSize * 2
+//        font.family: "acumin-pro"
+//        padding: 10
+//    }
 
     Etat1 {
         id : etat1
-        visible: calendar_visibility
+        visible: calendar1_visibility
     }
 
-    Etat3 {
+    Etat2 {
         id : etat2
-        visible: false
+        visible: calendar2_visibility
     }
 
 
