@@ -12,7 +12,6 @@
         <file>qml/modules/MyMap.qml</file>
         <file>qml/pages/HomePage/Etat3.qml</file>
         <file>qml/javascript/httpRequest.js</file>
-        <file>qml/modules/LogoAFPA.qml</file>
         <file>qml/pages/MyDebuggingPage.qml</file>
         <file>qml/pages/ClientPage.qml</file>
         <file>qml/pages/ClientPage/Etat1.qml</file>
@@ -44,5 +43,8 @@
         <file>images/icon/home_gris.png</file>
         <file>images/icon/itinerary_gris.png</file>
         <file>images/icon/map_gris.png</file>
+        <file>qml/modules/Logo.qml</file>
+        <file>images/logo-clconseils.png</file>
+        <file>qml/modules/MyCalendar.qml</file>
     </qresource>
 </RCC>

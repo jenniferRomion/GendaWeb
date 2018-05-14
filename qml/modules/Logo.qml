@@ -3,10 +3,12 @@ import "../../images"
 
 
 Image {
-    id: logoAfpa
+
+
+    id: logo
     anchors.horizontalCenter: parent.horizontalCenter
     anchors.bottom: parent.bottom
-    source: "../../images/icon/logoAFPA.png"
+    source: "../../images/logo-clconseils"
 
     height: (1/10) * mainPage.height
     fillMode: Image.PreserveAspectFit
