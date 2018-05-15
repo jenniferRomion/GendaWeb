@@ -11,37 +11,36 @@ TabBar {
     spacing : mainPage.width *0.01
 
     background: Rectangle {
-           color: "white"
+           color: "#C6AF90"
        }
 
     TabItem {
         index : 0
-        imgsource: root.currentIndex == index ? "../../../images/icon/home_or.png" : "../../../images/icon/home.png"
+        imgsource: root.currentIndex == index ? "../../../images/icon/home_rouge.png" : "../../../images/icon/home.png"
     }
 
     TabItem {
         index : 1
-        imgsource: root.currentIndex == index ? "../../../images/icon/clients_or.png" : "../../../images/icon/clients.png"
+        imgsource: root.currentIndex == index ? "../../../images/icon/clients_rouge.png" : "../../../images/icon/clients.png"
     }
 
     TabItem {
         index : 2
-        imgsource: root.currentIndex == index ? "../../../images/icon/itinerary_or.png" : "../../../images/icon/itinerary.png"
+        imgsource: root.currentIndex == index ? "../../../images/icon/itinerary_rouge.png" : "../../../images/icon/itinerary.png"
     }
 
     TabItem {
         index : 3
-        imgsource: root.currentIndex == index ? "../../../images/icon/map_or.png" : "../../../images/icon/map.png"
+        imgsource: root.currentIndex == index ? "../../../images/icon/map_rouge.png" : "../../../images/icon/map.png"
     }
-
 
     TabItem {
         index : 4
-        imgsource: root.currentIndex == index ? "../../../images/icon/calendar_or.png" : "../../../images/icon/calendar.png"
+        imgsource: root.currentIndex == index ? "../../../images/icon/calendar_rouge.png" : "../../../images/icon/calendar.png"
     }
 
     TabItem {
         index : 5
-        imgsource: root.currentIndex == index ? "../../../images/icon/config_or.png" : "../../../images/icon/config.png"
+        imgsource: root.currentIndex == index ? "../../../images/icon/config_rouge.png" : "../../../images/icon/config.png"
     }
 }

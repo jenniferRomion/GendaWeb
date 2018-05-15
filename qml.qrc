@@ -64,5 +64,16 @@
         <file>images/icon/arrow_left.png</file>
         <file>images/icon/arrow_return.png</file>
         <file>qml/modules/MyButton.qml</file>
+        <file>images/icon/calendar_rouge.png</file>
+        <file>images/icon/clients_rouge.png</file>
+        <file>images/icon/config_rouge.png</file>
+        <file>images/icon/home_rouge.png</file>
+        <file>images/icon/itinerary_rouge.png</file>
+        <file>images/icon/map_rouge.png</file>
+        <file>images/user.png</file>
+        <file>images/user1.png</file>
+        <file>qml/pages/HomePage/UserPoints.qml</file>
+        <file>images/star.png</file>
+        <file>images/star_or.png</file>
     </qresource>
 </RCC>

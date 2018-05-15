@@ -6,6 +6,7 @@ import QtQuick.Controls 2.2
     Text {
         property bool bold : false
         property bool underline: false
+        property bool italic: false
 
 
         text : title
@@ -14,6 +15,7 @@ import QtQuick.Controls 2.2
         font.pixelSize: Qt.application.font.pixelSize * 1.5
         font.bold : bold
         font.underline: underline
+        font.italic: italic
         color : "black"
 
         width: parent.width
