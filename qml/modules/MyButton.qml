@@ -2,6 +2,8 @@ import QtQuick 2.7
 import QtQuick.Controls 2.2
 
 Button {
+    property string srcIcon : ""
+
     id: control
     font.pixelSize: Qt.application.font.pixelSize * 1.25
     font.family: "acumin-pro"
@@ -11,6 +13,15 @@ Button {
         border.color: "#26282a"
         border.width: 1
         radius: 4
+
+        Image {
+            z : 3
+            anchors.centerIn: parent
+            source: srcIcon
+
+            height: parent.height
+            fillMode: Image.PreserveAspectFit
+        }
 
 
         gradient: Gradient {

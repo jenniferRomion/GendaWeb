@@ -113,7 +113,7 @@ ColumnLayout {
                 height: (1/10) * etat.height
 
                 onClicked : {
-                    calendarPage.currentDate = "calendar.selectedDate";
+                    calendarPage.currentDate = calendar.selectedDate;
                     calendarPage.calendar1_visibility = false;
                     calendarPage.calendar2_visibility = true;
                 }

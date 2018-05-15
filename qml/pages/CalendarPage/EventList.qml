@@ -62,11 +62,10 @@ Rectangle {
         highlight: Rectangle { color: "#C6AF90" ; radius : 4 }
         focus: true
         onCurrentItemChanged: {
-                        console.log(treksModel.get(view.currentIndex).label)
-
-                        clientName = idModel.get(idListView.currentIndex).customer;
+                        clientName = idModel.get(idListView.currentIndex).name;
                         clientRdv = idModel.get(idListView.currentIndex).type;
                         rdvTime = idModel.get(idListView.currentIndex).hours;
+            //passer l'Id prospect + prosp-numfiche
         }
 
 

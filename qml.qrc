@@ -47,7 +47,6 @@
         <file>qml/modules/MyCalendar.qml</file>
         <file>qml/modules/ErrorBox.qml</file>
         <file>qml/modules/InputBox.qml</file>
-        <file>qml/modules/MyButton.qml</file>
         <file>qml/modules/TextEditBox.qml</file>
         <file>images/eventindicator.png</file>
         <file>qml/modules/TextBox.qml</file>
@@ -62,5 +61,8 @@
         <file>images/icon/map_or.png</file>
         <file>qml/modules/ListButtonDelete.qml</file>
         <file>images/icon/delete.png</file>
+        <file>images/icon/arrow_left.png</file>
+        <file>images/icon/arrow_return.png</file>
+        <file>qml/modules/MyButton.qml</file>
     </qresource>
 </RCC>

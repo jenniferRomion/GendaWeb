@@ -7,6 +7,7 @@ import QtQuick.Controls 2.2
         property bool bold : false
         property bool underline: false
 
+
         text : title
 
         font.family: "Californian FB"
@@ -14,6 +15,9 @@ import QtQuick.Controls 2.2
         font.bold : bold
         font.underline: underline
         color : "black"
+
+        width: parent.width
+        wrapMode: Text.Wrap
 
 
         leftPadding: 0.01 * parent.width

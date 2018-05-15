@@ -17,7 +17,7 @@ ColumnLayout {
 
     RowLayout {
         spacing: 0
-        Layout.preferredHeight: (1/2)*parent.height
+        Layout.preferredHeight: (1/4)*parent.height
         Layout.fillHeight: true
         Layout.fillWidth: true
 
@@ -44,5 +44,21 @@ ColumnLayout {
 
         }
     }
+
+    RowLayout {
+        spacing: 0
+        Layout.preferredHeight: (1/4)*parent.height
+        Layout.fillHeight: true
+        Layout.fillWidth: true
+
+        Rectangle {
+            Layout.fillHeight: true
+            Layout.fillWidth: true
+            color: "white"
+
+            Logo {}
+        }
+    }
+
 
 }

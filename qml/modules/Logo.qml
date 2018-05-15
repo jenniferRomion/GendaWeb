@@ -7,7 +7,7 @@ Image {
 
     id: logo
     anchors.horizontalCenter: parent.horizontalCenter
-    anchors.bottom: parent.bottom
+    anchors.centerIn: parent
     source: "../../images/logo-clconseils"
 
     height: (1/10) * mainPage.height
