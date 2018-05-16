@@ -49,7 +49,7 @@ ColumnLayout {
                 color: "lightGrey"
 
                 UserPoints {
-                    starSize : 0.04 * mainPage.height
+                    starSize : 0.03 * mainPage.height
                     starSrc: "../../../images/star.png"
                     backgroundColor : "lightGrey"
                 }
@@ -69,6 +69,7 @@ ColumnLayout {
                 HeaderButtonReturn {
                     anchors.centerIn: parent
                     onClicked: {
+                        console.log("ok")
                         homePage.home3_visibility = false
                         homePage.home2_visibility = true
                     }

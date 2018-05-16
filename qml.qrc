@@ -76,5 +76,8 @@
         <file>images/star.png</file>
         <file>images/star_or.png</file>
         <file>qml/modules/HeaderButtonReturn.qml</file>
+        <file>qml/pages/ConfigurationPage/ConfigItem.qml</file>
+        <file>images/icon/sound.png</file>
+        <file>images/icon/user.png</file>
     </qresource>
 </RCC>

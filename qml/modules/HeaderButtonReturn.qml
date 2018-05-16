@@ -3,6 +3,7 @@ import QtQuick.Controls 2.2
 
 Button {
     id: control
+    anchors.fill : parent
 
     background: Rectangle {
 
