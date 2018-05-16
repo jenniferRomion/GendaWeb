@@ -1,3 +1,21 @@
+/*
+RowTypeButton {
+    sourceImageLeftButton: ""
+    onLeftClicked: {
+
+    }
+
+    textMiddleButton: ""
+    onMiddleClicked: {
+
+    }
+
+    textRightButton: ""
+    onRightClicked: {
+
+    }
+}*/
+
 import QtQuick 2.9
 import QtQuick.Controls 2.2
 import QtQuick.Layouts 1.1
@@ -5,14 +23,14 @@ import QtQuick.Controls.Styles 1.2
 import QtQuick.Window 2.2
 
 
-//Search change todo  ctrl+F -> //AZE
 RowLayout{
     id: rowTypeButton
     anchors.fill: parent
     spacing: 0
+    width: 384
 
 
-    property string sourceImageLeftButton: imageLeftButton.source
+    property string srcLeftIcon : ""
     property string textMiddleButton: middleButton.text
     property string textRightButton: rightButton.text
     signal leftClicked
@@ -21,32 +39,31 @@ RowLayout{
 
     Rectangle{
         Layout.fillWidth: true
-        Layout.minimumWidth: leftButton.width
-        Layout.preferredWidth: 70
-        Layout.maximumWidth: 100
-        Layout.leftMargin: 10
+        Layout.fillHeight: true
+        Layout.maximumWidth: (1/3) * parent.width
+        Layout.leftMargin: 0.03 * parent.width
         
         MyButton{
             id: leftButton
-            contentItem: Image {
-                id: imageLeftButton
-                source: sourceImageLeftButton
-                width: leftButton.width
-                height: leftButton.height
-                fillMode: Image.PreserveAspectFit
-            }
+            width: parent.width
+            height: parent.height
+            srcIcon: srcLeftIcon
+
             onClicked: rowTypeButton.leftClicked()
         }
     }
     
     Rectangle{
         Layout.fillWidth: true
-        Layout.minimumWidth: 50
-        Layout.preferredWidth: 70
-        Layout.maximumWidth: 100
-        
+        Layout.fillHeight: true
+        Layout.maximumWidth: (1/3) * parent.width
+        Layout.rightMargin: 0.03 * parent.width
+        Layout.leftMargin: 0.03 * parent.width
+
         MyButton{
             id: middleButton
+            width: parent.width
+            height: parent.height
             text: textMiddleButton
             onClicked: rowTypeButton.middleClicked()
         }
@@ -54,13 +71,14 @@ RowLayout{
     
     Rectangle{
         Layout.fillWidth: true
-        Layout.minimumWidth: 50
-        Layout.preferredWidth: 70
-        Layout.maximumWidth: 100
-        Layout.rightMargin: 10
-        
+        Layout.fillHeight: true
+        Layout.maximumWidth: (1/3) * parent.width
+        Layout.rightMargin: 0.03 * parent.width
+
         MyButton{
             id: rightButton
+            width: parent.width
+            height: parent.height
             text: textRightButton
             onClicked: rowTypeButton.rightClicked()
         }

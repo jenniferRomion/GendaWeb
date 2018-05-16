@@ -26,7 +26,16 @@ ColumnLayout {
             Layout.fillWidth: true
             color: "white"
 
+            MyList{
+                width: parent.width
+                height: parent.height
 
+            }
+
+          /*  MyTable{
+                scrollH: false
+                scrollV: false
+            }*/
         }
     }
 

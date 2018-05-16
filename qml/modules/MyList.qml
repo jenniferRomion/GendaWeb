@@ -1,74 +1,49 @@
 import QtQuick 2.0
+import QtQuick.Layouts 1.1
+import "../javascript/ColumnHelper.js" as ColumnHelper
 
 Rectangle {
     id : myListView
 
-    ListModel {
-        id: leModel
-        ListElement {
-            nomClient : ""
-            contactClient : ""
-            produit : ""
-            lieuProduit : ""
-            satisfactionClient : ""
-        }
-    }
+    property variant columnWidths: ColumnHelper.calcColumnWidths(model, list)
 
-    Component {
-
-        id: delegateComponent
-
-        Item {
-
-            anchors {
-                left: parent.left;
-                right: parent.right
+    /*  ListModel {
+            id: unModel
+            ListElement {
+                nomClient : "";
+                contactClient : "";
+                produit : "";
+                lieuProduit : "";
+                satisfactionClient : "";
             }
-            height: column.implicitHeight + 4
+        }*/
 
-            Column {
-                id: column
-                anchors {
-                    fill: parent
-                    margins: 2
-                }
-
-                Text {
-                    text: "some"
-                    font.family: "acumin-pro"
-                    font.pixelSize: Qt.application.font.pixelSize * 1.5
-                }
-
-                Text {
-                    text: "any"
-                    font.family: "acumin-pro"
-                    font.pixelSize: Qt.application.font.pixelSize * 1
-                }
-            }
-
-            MouseArea {
-                anchors.fill: parent
-                onClicked: view.currentIndex = index
-            }
-        }
-    }
 
     ListView {
-        id : view
+        id : list
         anchors { fill: parent; margins: 2 }
 
-        delegate: delegateComponent
-        model: MyModel{
+        model: MyModel{}
+//        delegate: DelegateComponent{}
 
-        }
-
-        highlight: Rectangle { color: 'blue' ; radius : 4 }
+        highlight: Rectangle { color: 'lightblue' ; radius : 4 }
         focus: true
         onCurrentItemChanged: {
 
         }
 
         spacing: 4
+
+        /*header: Row{
+            spacing: parent.width*0.1
+            width: view.width
+            height: view.height * 0.15
+            Text{ text: "Client"}
+            Text{ text: "Contact"}
+            Text{ text: "Produit"}
+            Text{ text: "Position"}
+            Text{ text: "Satisfaction"}
+        }*/
     }
 }
 

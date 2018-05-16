@@ -9,20 +9,20 @@ import "ClientPage"
 Page {
     id : clientPage
 
-    property bool client1_visibility: true
-    property bool client2_visibility: false
+    property bool client1_visibility: false
+    property bool client2_visibility: true
     property bool client3_visibility: false
     property bool client4_visibility: false
     property bool client5_visibility: false
 
 
 
-    header: Label {
-        text: qsTr("Mes clients")
-        font.pixelSize: Qt.application.font.pixelSize * 2
-        font.family: "acumin-pro"
-        padding: 10
-    }
+//    header: Label {
+//        text: qsTr("Mes clients")
+//        font.pixelSize: Qt.application.font.pixelSize * 2
+//        font.family: "acumin-pro"
+//        padding: 10
+//    }
 
         Etat1 {
             id : etat1
