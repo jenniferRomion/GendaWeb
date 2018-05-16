@@ -17,6 +17,9 @@ ApplicationWindow {
     property var pixelDensity: Screen.pixelDensity
     property bool debugVisibility : false;
 
+    property string avatarPath : "../../../images/user1.png"
+    property int ccialPoints : 4 // a modifier selon ctx
+
     visible: true
 
     width: 384

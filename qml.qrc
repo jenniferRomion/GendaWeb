@@ -75,5 +75,6 @@
         <file>qml/pages/HomePage/UserPoints.qml</file>
         <file>images/star.png</file>
         <file>images/star_or.png</file>
+        <file>qml/modules/HeaderButtonReturn.qml</file>
     </qresource>
 </RCC>

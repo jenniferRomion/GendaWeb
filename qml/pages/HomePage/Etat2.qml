@@ -71,7 +71,7 @@ ColumnLayout {
                     height: (1/8) * mainPage.height
                     fillMode: Image.PreserveAspectFit
 
-                    source : "../../../images/user1.png"
+                    source : mainPage.avatarPath
                 }
 
             }
@@ -84,7 +84,7 @@ ColumnLayout {
 
                 UserPoints {
                     anchors.centerIn: parent
-                    points: 4
+                    starSize : 0.05 * mainPage.height
                 }
             }
 
@@ -111,11 +111,8 @@ ColumnLayout {
                 height: (1/10) * etat.height
 
                 onClicked: {
-                    console.log("profil")
                     homePage.home2_visibility = false
-                    homePage.home1_visibility = true
-//                    homePage.home2_visibility = false
-//                    homePage.home3_visibility = true
+                    homePage.home3_visibility = true
                 }
             }
         }

@@ -15,6 +15,7 @@ ColumnLayout {
 
     spacing: 0.01 * etat.height
 
+    /* calendar */
     RowLayout {
         spacing: 0
         Layout.preferredHeight: (1/2)*parent.height
@@ -30,10 +31,10 @@ ColumnLayout {
                 id : calendar
                 anchors.centerIn: parent
             }
-
         }
     }
 
+    /* Day label */
     RowLayout {
         spacing: 0
         Layout.preferredHeight: (1/18)*parent.height
@@ -56,10 +57,10 @@ ColumnLayout {
                       + Qt.locale().standaloneMonthName(calendar.selectedDate.getMonth())
                       + calendar.selectedDate.toLocaleDateString(Qt.locale(), " yyyy")
             }
-
         }
     }
 
+    /* Event list */
     RowLayout {
         spacing: 0
         Layout.preferredHeight: (6/18)*parent.height
@@ -76,10 +77,10 @@ ColumnLayout {
                 anchors.fill : parent
             }
         }
-
-
     }
 
+
+    /* Buttons */
     RowLayout {
         spacing: 0
         Layout.preferredHeight: (1/8)*parent.height

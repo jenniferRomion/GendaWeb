@@ -1,22 +1,25 @@
 import QtQuick 2.0
 
 Row {
-    property int points: 0
+    property real starSize : 0.01 * mainPage.height
+    property string backgroundColor : "white"
+    property string starSrc : "../../../images/star_or.png"
+    spacing: 0.01 * mainPage.width
 
-    width : (0.05 * mainPage.height) * points
+//    width : starSize * mainPage.ccialPoints
 
     Repeater {
-        model: points
+        model: mainPage.ccialPoints
 
         Rectangle {
-            width: 0.05 * mainPage.height
-            height: 0.05 * mainPage.height
+            width: starSize
+            height: starSize
+            color: backgroundColor
 
             Image {
-                height: 0.05 * mainPage.height
+                height: starSize
                 fillMode: Image.PreserveAspectFit
-
-                source : "../../../images/star_or.png"
+                source : starSrc
             }
         }
     }
