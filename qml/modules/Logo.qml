@@ -6,7 +6,7 @@ Image {
     id: logo
     anchors.horizontalCenter: parent.horizontalCenter
     anchors.centerIn: parent
-    source: "../../images/logo-clconseils"
+    source: "../../images/logo_clconseils"
 
     height: (1/8) * mainPage.height
     fillMode: Image.PreserveAspectFit

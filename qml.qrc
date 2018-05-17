@@ -43,7 +43,6 @@
         <file>images/icon/itinerary_gris.png</file>
         <file>images/icon/map_gris.png</file>
         <file>qml/modules/Logo.qml</file>
-        <file>images/logo-clconseils.png</file>
         <file>qml/modules/MyCalendar.qml</file>
         <file>qml/modules/ErrorBox.qml</file>
         <file>qml/modules/InputBox.qml</file>
@@ -79,5 +78,35 @@
         <file>qml/pages/ConfigurationPage/ConfigItem.qml</file>
         <file>images/icon/sound.png</file>
         <file>images/icon/user.png</file>
+        <file>images/logo_clconseils.png</file>
+        <file>images/icon/phone.png</file>
+        <file>images/icon/color.png</file>
+        <file>qml/pages/ConfigurationPage/Etat2_avatar.qml</file>
+        <file>qml/pages/ConfigurationPage/AvatarList.qml</file>
+        <file>qml/pages/ConfigurationPage/AvatarModel.qml</file>
+        <file>images/man.png</file>
+        <file>images/woman.png</file>
+        <file>images/user2.png</file>
+        <file>qml/pages/ConfigurationPage/Etat3.qml</file>
+        <file>images/icon/music.png</file>
+        <file>qml/modules/MySwitchButton.qml</file>
+        <file>qml/modules/ComboType.qml</file>
+        <file>qml/pages/ConfigurationPage/DistanceModel.qml</file>
+        <file>qml/pages/ConfigurationPage/Etat3_ring.qml</file>
+        <file>sounds/ding_dong.wav</file>
+        <file>images/icon/play.png</file>
+        <file>qml/pages/ConfigurationPage/RingList.qml</file>
+        <file>qml/pages/ConfigurationPage/RingModel.qml</file>
+        <file>sounds/buzzer.wav</file>
+        <file>sounds/oiseau.wav</file>
+        <file>sounds/ressort.wav</file>
+        <file>qml/pages/ConfigurationPage/ColorList.qml</file>
+        <file>qml/pages/ConfigurationPage/ColorModel.qml</file>
+        <file>images/colorPicker/blue.png</file>
+        <file>images/colorPicker/gold.png</file>
+        <file>images/colorPicker/grey.png</file>
+        <file>images/colorPicker/pink.png</file>
+        <file>images/colorPicker/red.png</file>
+        <file>qml/pages/ConfigurationPage/Etat2_color.qml</file>
     </qresource>
 </RCC>

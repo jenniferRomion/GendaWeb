@@ -11,7 +11,7 @@ TabBar {
     spacing : mainPage.width *0.01
 
     background: Rectangle {
-           color: "#C6AF90"
+           color: colorMajor
        }
 
     TabItem {

@@ -30,7 +30,7 @@ ColumnLayout {
             color: "lightGrey"
 
             Image {
-                source : "../../../images/icon/phone.png"
+                source : "../../../images/icon/sound.png"
                 height: 0.05 * mainPage.height
                 anchors.centerIn: parent
                 fillMode: Image.PreserveAspectFit
@@ -44,7 +44,7 @@ ColumnLayout {
             color: "lightGrey"
 
             TextBox {
-                text : "Affichage"
+                text : "Sons et notifications"
                 bold : true
                 horizontalAlignment: Text.AlignLeft
             }
@@ -59,7 +59,7 @@ ColumnLayout {
             HeaderButtonReturn {
                 onClicked: {
                     console.log("ok")
-                    configurationPage.config_visibility2 = false
+                    configurationPage.config_visibility3 = false
                     configurationPage.config_visibility1 = true
                 }
             }
@@ -67,7 +67,7 @@ ColumnLayout {
     }
 
 
-    /* Avatar */
+    /* Actif */
     RowLayout {
         spacing: 0
         Layout.topMargin: 0.01 * mainPage.height
@@ -78,17 +78,69 @@ ColumnLayout {
         Rectangle {
             Layout.fillHeight: true
             Layout.fillWidth: true
+            Layout.preferredWidth: 0.6 * etat.width
             //color: "yellow"
 
-            ConfigItem {
-                width: parent.width
-                height: parent.height
-                iconsrc: "../../../images/icon/user.png"
-                title: "Avatar"
+            TextBox {
+                text : "Activer les notifications"
+                horizontalAlignment: Text.AlignLeft
+            }
+        }
+        Rectangle {
+            Layout.fillHeight: true
+            Layout.fillWidth: true
+            Layout.preferredWidth: 0.4 * etat.width
+            //color: "blue"
 
-                onClicked: {
-                    configurationPage.config_visibility2 = false
-                    configurationPage.config_visibility2_avatar = true
+            MySwitchButton {
+                anchors.centerIn: parent
+                checkedValue: notificationActive
+                switchWidth: 1/2 * parent.width
+                switchHeight: 1/3 * parent.height
+
+                onCheckedValueChanged: { notificationActive = checkedValue }
+            }
+        }
+    }
+
+    Rectangle {
+        Layout.fillHeight: true
+        Layout.fillWidth: true
+        Layout.preferredHeight: 0.005 * etat.height
+        color: "darkgrey"
+    }
+
+    /* kilometres */
+    RowLayout {
+        spacing: 0
+        Layout.preferredHeight: (1/8)*parent.height
+        Layout.fillHeight: true
+        Layout.fillWidth: true
+
+        Rectangle {
+            Layout.fillHeight: true
+            Layout.fillWidth: true
+            Layout.preferredWidth: 0.6 * etat.width
+            //color: "yellow"
+
+            TextBox {
+                text : "Distance d'alerte (km)"
+                horizontalAlignment: Text.AlignLeft
+            }
+        }
+        Rectangle {
+            Layout.fillHeight: true
+            Layout.fillWidth: true
+            Layout.preferredWidth: 0.4 * etat.width
+            //color: "blue"
+
+            ComboType {
+                height : 1/2 * parent.height
+                width : 0.9 * parent.width
+                model: DistanceModel {}
+                currentIndex: distanceIndex
+                onCurrentIndexChanged: {
+                    distanceIndex =currentIndex
                 }
             }
         }
@@ -101,7 +153,7 @@ ColumnLayout {
         color: "darkgrey"
     }
 
-    /* System color */
+    /* sound */
     RowLayout {
         spacing: 0
         Layout.preferredHeight: (1/8)*parent.height
@@ -116,12 +168,12 @@ ColumnLayout {
             ConfigItem {
                 width: parent.width
                 height: parent.height
-                iconsrc: "../../../images/icon/color.png"
-                title: "Couleurs d'affichage"
+                iconsrc: "../../../images/icon/music.png"
+                title: "Sonnerie"
 
                 onClicked: {
-                    configurationPage.config_visibility2 = false
-                    configurationPage.config_visibility2_color = true
+                    configurationPage.config_visibility3 = false
+                    configurationPage.config_visibility3_ring = true
                 }
             }
         }
@@ -134,11 +186,10 @@ ColumnLayout {
         color: "darkgrey"
     }
 
-
     /* space filler */
     RowLayout {
         spacing: 0
-        Layout.preferredHeight: (5/8)*parent.height
+        Layout.preferredHeight: (4/8)*parent.height
         Layout.fillHeight: true
         Layout.fillWidth: true
 

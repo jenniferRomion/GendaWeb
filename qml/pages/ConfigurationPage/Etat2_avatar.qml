@@ -9,6 +9,8 @@ ColumnLayout {
 
     id : etat
 
+    property string newAvatarSrc: ""
+
     anchors.fill: parent
     Layout.fillHeight: true
     Layout.fillWidth: true
@@ -30,7 +32,7 @@ ColumnLayout {
             color: "lightGrey"
 
             Image {
-                source : "../../../images/icon/phone.png"
+                source : "../../../images/icon/user.png"
                 height: 0.05 * mainPage.height
                 anchors.centerIn: parent
                 fillMode: Image.PreserveAspectFit
@@ -44,7 +46,7 @@ ColumnLayout {
             color: "lightGrey"
 
             TextBox {
-                text : "Affichage"
+                text : "Avatar"
                 bold : true
                 horizontalAlignment: Text.AlignLeft
             }
@@ -59,19 +61,40 @@ ColumnLayout {
             HeaderButtonReturn {
                 onClicked: {
                     console.log("ok")
-                    configurationPage.config_visibility2 = false
-                    configurationPage.config_visibility1 = true
+                    configurationPage.config_visibility2_avatar = false
+                    configurationPage.config_visibility2 = true
                 }
             }
         }
     }
 
 
-    /* Avatar */
+    /* AvatarList */
     RowLayout {
         spacing: 0
         Layout.topMargin: 0.01 * mainPage.height
-        Layout.preferredHeight: (1/8)*parent.height
+        Layout.preferredHeight: (3/8)*parent.height
+        Layout.fillHeight: true
+        Layout.fillWidth: true
+
+        Rectangle {
+            Layout.fillHeight: true
+            Layout.fillWidth: true
+            color: "lightblue"
+
+            AvatarList {
+                id : avatarlist
+                anchors.fill : parent
+            }
+        }
+    }
+
+
+
+    /* Selected */
+    RowLayout {
+        spacing: 0
+        Layout.preferredHeight: (3/8)*parent.height
         Layout.fillHeight: true
         Layout.fillWidth: true
 
@@ -80,28 +103,16 @@ ColumnLayout {
             Layout.fillWidth: true
             //color: "yellow"
 
-            ConfigItem {
-                width: parent.width
-                height: parent.height
-                iconsrc: "../../../images/icon/user.png"
-                title: "Avatar"
-
-                onClicked: {
-                    configurationPage.config_visibility2 = false
-                    configurationPage.config_visibility2_avatar = true
-                }
+            Image {
+                anchors.centerIn: parent
+                height: 0.8 * parent.height
+                source : newAvatarSrc
+                fillMode: Image.PreserveAspectFit
             }
         }
     }
 
-    Rectangle {
-        Layout.fillHeight: true
-        Layout.fillWidth: true
-        Layout.preferredHeight: 0.005 * etat.height
-        color: "darkgrey"
-    }
 
-    /* System color */
     RowLayout {
         spacing: 0
         Layout.preferredHeight: (1/8)*parent.height
@@ -111,43 +122,24 @@ ColumnLayout {
         Rectangle {
             Layout.fillHeight: true
             Layout.fillWidth: true
-            //color: "yellow"
+            //color: "red"
 
-            ConfigItem {
-                width: parent.width
-                height: parent.height
-                iconsrc: "../../../images/icon/color.png"
-                title: "Couleurs d'affichage"
+            MyButton {
+                text : "Valider"
+                anchors.centerIn: parent
+                width: (1/3) * etat.width
+                height: (1/10) * etat.height
 
-                onClicked: {
-                    configurationPage.config_visibility2 = false
-                    configurationPage.config_visibility2_color = true
+                onClicked : {
+                    avatarPath = newAvatarSrc
+                    configurationPage.config_visibility2_avatar = false
+                    configurationPage.config_visibility2 = true
                 }
             }
         }
     }
 
-    Rectangle {
-        Layout.fillHeight: true
-        Layout.fillWidth: true
-        Layout.preferredHeight: 0.005 * etat.height
-        color: "darkgrey"
-    }
 
-
-    /* space filler */
-    RowLayout {
-        spacing: 0
-        Layout.preferredHeight: (5/8)*parent.height
-        Layout.fillHeight: true
-        Layout.fillWidth: true
-
-        Rectangle {
-            Layout.fillHeight: true
-            Layout.fillWidth: true
-            color: "white"
-        }
-    }
 
 
 }

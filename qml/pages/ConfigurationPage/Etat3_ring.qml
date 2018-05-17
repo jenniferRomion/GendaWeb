@@ -2,12 +2,15 @@ import QtQuick 2.9
 import QtQuick.Controls 2.2
 import QtQuick.Layouts 1.1
 import QtQuick.Controls.Styles 1.2
+import QtMultimedia 5.8
 
 import "../../modules"
 
 ColumnLayout {
 
     id : etat
+
+    property string newRingSrc: ringPath
 
     anchors.fill: parent
     Layout.fillHeight: true
@@ -30,7 +33,7 @@ ColumnLayout {
             color: "lightGrey"
 
             Image {
-                source : "../../../images/icon/phone.png"
+                source : "../../../images/icon/music.png"
                 height: 0.05 * mainPage.height
                 anchors.centerIn: parent
                 fillMode: Image.PreserveAspectFit
@@ -44,7 +47,7 @@ ColumnLayout {
             color: "lightGrey"
 
             TextBox {
-                text : "Affichage"
+                text : "Sonnerie"
                 bold : true
                 horizontalAlignment: Text.AlignLeft
             }
@@ -59,19 +62,40 @@ ColumnLayout {
             HeaderButtonReturn {
                 onClicked: {
                     console.log("ok")
-                    configurationPage.config_visibility2 = false
-                    configurationPage.config_visibility1 = true
+                    configurationPage.config_visibility3_ring = false
+                    configurationPage.config_visibility3 = true
                 }
             }
         }
     }
 
 
-    /* Avatar */
+    /* RingList */
     RowLayout {
         spacing: 0
         Layout.topMargin: 0.01 * mainPage.height
-        Layout.preferredHeight: (1/8)*parent.height
+        Layout.preferredHeight: (3/8)*parent.height
+        Layout.fillHeight: true
+        Layout.fillWidth: true
+
+        Rectangle {
+            Layout.fillHeight: true
+            Layout.fillWidth: true
+            color: "lightblue"
+
+            RingList {
+                id : ringlist
+                anchors.fill : parent
+            }
+        }
+    }
+
+
+
+    /* Selected */
+    RowLayout {
+        spacing: 0
+        Layout.preferredHeight: (3/8)*parent.height
         Layout.fillHeight: true
         Layout.fillWidth: true
 
@@ -80,28 +104,26 @@ ColumnLayout {
             Layout.fillWidth: true
             //color: "yellow"
 
-            ConfigItem {
-                width: parent.width
-                height: parent.height
-                iconsrc: "../../../images/icon/user.png"
-                title: "Avatar"
+            SoundEffect {
+                id: playsound
+                source : newRingSrc
+            }
 
-                onClicked: {
-                    configurationPage.config_visibility2 = false
-                    configurationPage.config_visibility2_avatar = true
+            Image {
+                source : "../../../images/icon/play.png"
+                height: 0.1 * mainPage.height
+                anchors.centerIn: parent
+                fillMode: Image.PreserveAspectFit
+
+                MouseArea {
+                    anchors.fill : parent
+                    onClicked: { playsound.play() }
                 }
             }
         }
     }
 
-    Rectangle {
-        Layout.fillHeight: true
-        Layout.fillWidth: true
-        Layout.preferredHeight: 0.005 * etat.height
-        color: "darkgrey"
-    }
 
-    /* System color */
     RowLayout {
         spacing: 0
         Layout.preferredHeight: (1/8)*parent.height
@@ -111,43 +133,25 @@ ColumnLayout {
         Rectangle {
             Layout.fillHeight: true
             Layout.fillWidth: true
-            //color: "yellow"
+            //color: "red"
 
-            ConfigItem {
-                width: parent.width
-                height: parent.height
-                iconsrc: "../../../images/icon/color.png"
-                title: "Couleurs d'affichage"
+            MyButton {
+                text : "Valider"
+                anchors.centerIn: parent
+                width: (1/3) * etat.width
+                height: (1/10) * etat.height
 
-                onClicked: {
-                    configurationPage.config_visibility2 = false
-                    configurationPage.config_visibility2_color = true
+                onClicked : {
+                    ringPath = newRingSrc
+                    configurationPage.config_visibility3_ring = false
+                    configurationPage.config_visibility3 = true
+
                 }
             }
         }
     }
 
-    Rectangle {
-        Layout.fillHeight: true
-        Layout.fillWidth: true
-        Layout.preferredHeight: 0.005 * etat.height
-        color: "darkgrey"
-    }
 
-
-    /* space filler */
-    RowLayout {
-        spacing: 0
-        Layout.preferredHeight: (5/8)*parent.height
-        Layout.fillHeight: true
-        Layout.fillWidth: true
-
-        Rectangle {
-            Layout.fillHeight: true
-            Layout.fillWidth: true
-            color: "white"
-        }
-    }
 
 
 }

@@ -59,7 +59,7 @@ Rectangle {
         model : EventModel {}
         delegate: idDelegate
 
-        highlight: Rectangle { color: "#C6AF90" ; radius : 4 }
+        highlight: Rectangle { color: colorMajor ; radius : 4 }
         focus: true
         onCurrentItemChanged: {
                         clientName = idModel.get(idListView.currentIndex).name;
