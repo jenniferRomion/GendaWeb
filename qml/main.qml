@@ -24,11 +24,8 @@ ApplicationWindow {
     property string avatarPath : "../../../images/user.png"
     property string ringPath : "../../../sounds/ressort.wav"
 
-//    property string colorMajor : "#C6AF90"
-//    property string colorMinor : "#EDECE0"
-
-    property string colorMajor : "silver"
-    property string colorMinor : "gainsboro"
+    property string colorMajor : "#C6AF90"
+    property string colorMinor : "#EDECE0"
 
     property int ccialPoints : 4
 

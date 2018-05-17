@@ -11,8 +11,12 @@ TabBar {
     spacing : mainPage.width *0.01
 
     background: Rectangle {
-           color: colorMajor
-       }
+        color: colorMajor
+        gradient: Gradient {
+            GradientStop { position: 0 ; color: colorMinor }
+            GradientStop { position: 1 ; color: colorMajor }
+        }
+    }
 
     TabItem {
         index : 0
