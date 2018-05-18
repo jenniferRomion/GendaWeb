@@ -11,5 +11,4 @@ TextField {
     horizontalAlignment: TextInput.AlignHCenter
     verticalAlignment: TextInput.AlignVCenter
 
-    anchors.centerIn : parent
 }

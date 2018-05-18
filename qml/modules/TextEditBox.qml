@@ -13,7 +13,7 @@ import QtQuick.Controls 2.2
 
         readOnly: false
 
-        padding: 5
+        padding: 0.01 * parent.width
 
         font.family: "Californian FB"
         font.pixelSize: Qt.application.font.pixelSize * 1.5

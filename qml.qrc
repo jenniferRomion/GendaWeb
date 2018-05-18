@@ -12,7 +12,6 @@
         <file>qml/modules/MyMap.qml</file>
         <file>qml/pages/HomePage/Etat3.qml</file>
         <file>qml/javascript/httpRequest.js</file>
-        <file>qml/modules/LogoAFPA.qml</file>
         <file>qml/pages/MyDebuggingPage.qml</file>
         <file>qml/pages/ClientPage.qml</file>
         <file>qml/pages/ClientPage/Etat1.qml</file>
@@ -35,7 +34,6 @@
         <file>images/play.png</file>
         <file>qml/pages/CalendarPage/Etat2.qml</file>
         <file>qml/pages/ConfigurationPage/Etat2.qml</file>
-        <file>qml/pages/CalendarPage/Etat3.qml</file>
         <file>images/icon/calendar_gris.png</file>
         <file>qml/modules/TabItem.qml</file>
         <file>images/icon/clients_gris.png</file>
@@ -74,5 +72,70 @@
         <file>qml/pages/ClientPage/DelegateClients.qml</file>
         <file>qml/pages/ClientPage/ModelClients.qml</file>
         <file>images/icon/smiley_sad.png</file>
+        <file>qml/modules/Logo.qml</file>
+        <file>qml/modules/MyCalendar.qml</file>
+        <file>qml/modules/ErrorBox.qml</file>
+        <file>qml/modules/InputBox.qml</file>
+        <file>qml/modules/TextEditBox.qml</file>
+        <file>images/eventindicator.png</file>
+        <file>qml/modules/TextBox.qml</file>
+        <file>qml/pages/CalendarPage/EventList.qml</file>
+        <file>qml/pages/CalendarPage/EventModel.qml</file>
+        <file>images/icon/calendar_or.png</file>
+        <file>images/icon/clients_or.png</file>
+        <file>images/icon/config_or.png</file>
+        <file>images/icon/home_or.png</file>
+        <file>images/icon/itinerary_or.png</file>
+        <file>images/icon/map_or.png</file>
+        <file>qml/modules/ListButtonDelete.qml</file>
+        <file>images/icon/delete.png</file>
+        <file>images/icon/arrow_left.png</file>
+        <file>images/icon/arrow_return.png</file>
+        <file>qml/modules/MyButton.qml</file>
+        <file>images/icon/calendar_rouge.png</file>
+        <file>images/icon/clients_rouge.png</file>
+        <file>images/icon/config_rouge.png</file>
+        <file>images/icon/home_rouge.png</file>
+        <file>images/icon/itinerary_rouge.png</file>
+        <file>images/icon/map_rouge.png</file>
+        <file>images/user.png</file>
+        <file>images/user1.png</file>
+        <file>qml/pages/HomePage/UserPoints.qml</file>
+        <file>images/star.png</file>
+        <file>images/star_or.png</file>
+        <file>qml/modules/HeaderButtonReturn.qml</file>
+        <file>qml/pages/ConfigurationPage/ConfigItem.qml</file>
+        <file>images/icon/sound.png</file>
+        <file>images/icon/user.png</file>
+        <file>images/logo_clconseils.png</file>
+        <file>images/icon/phone.png</file>
+        <file>images/icon/color.png</file>
+        <file>qml/pages/ConfigurationPage/Etat2_avatar.qml</file>
+        <file>qml/pages/ConfigurationPage/AvatarList.qml</file>
+        <file>qml/pages/ConfigurationPage/AvatarModel.qml</file>
+        <file>images/man.png</file>
+        <file>images/woman.png</file>
+        <file>images/user2.png</file>
+        <file>qml/pages/ConfigurationPage/Etat3.qml</file>
+        <file>images/icon/music.png</file>
+        <file>qml/modules/MySwitchButton.qml</file>
+        <file>qml/modules/ComboType.qml</file>
+        <file>qml/pages/ConfigurationPage/DistanceModel.qml</file>
+        <file>qml/pages/ConfigurationPage/Etat3_ring.qml</file>
+        <file>sounds/ding_dong.wav</file>
+        <file>images/icon/play.png</file>
+        <file>qml/pages/ConfigurationPage/RingList.qml</file>
+        <file>qml/pages/ConfigurationPage/RingModel.qml</file>
+        <file>sounds/buzzer.wav</file>
+        <file>sounds/oiseau.wav</file>
+        <file>sounds/ressort.wav</file>
+        <file>qml/pages/ConfigurationPage/ColorList.qml</file>
+        <file>qml/pages/ConfigurationPage/ColorModel.qml</file>
+        <file>images/colorPicker/blue.png</file>
+        <file>images/colorPicker/gold.png</file>
+        <file>images/colorPicker/grey.png</file>
+        <file>images/colorPicker/pink.png</file>
+        <file>images/colorPicker/red.png</file>
+        <file>qml/pages/ConfigurationPage/Etat2_color.qml</file>
     </qresource>
 </RCC>

@@ -8,7 +8,13 @@ TabButton {
     property int index : 0
     property string imgsource : ""
 
-    background: Rectangle { color : root.currentIndex == index ? "grey" : "white" }
+    background: Rectangle {
+        color : root.currentIndex == index ? "white" : colorMajor
+        gradient: Gradient {
+            GradientStop { position: 0 ; color: root.currentIndex == index ? "white" : colorMinor }
+            GradientStop { position: 1 ; color: root.currentIndex == index ? "white" : colorMajor }
+        }
+    }
     Image {
         source: imgsource
 

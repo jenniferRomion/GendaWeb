@@ -15,12 +15,12 @@ Page {
 
 
 
-    header: Label {
-        text: qsTr("Home")
-        font.pixelSize: Qt.application.font.pixelSize * 2
-        font.family: "acumin-pro"
-        padding: 10
-    }
+//    header: Label {
+//        text: qsTr("Home")
+//        font.pixelSize: Qt.application.font.pixelSize * 2
+//        font.family: "acumin-pro"
+//        padding: 10
+//    }
 
     Etat1 {
         id : etat1
