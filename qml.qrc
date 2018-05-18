@@ -49,7 +49,6 @@
         <file>qml/modules/TextEditBox.qml</file>
         <file>images/eventindicator.png</file>
         <file>qml/modules/TextBox.qml</file>
-        <file>qml/modules/MyModel.qml</file>
         <file>qml/pages/CalendarPage/EventList.qml</file>
         <file>qml/pages/CalendarPage/EventModel.qml</file>
         <file>images/icon/calendar_or.png</file>
