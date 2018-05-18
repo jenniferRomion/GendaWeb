@@ -24,12 +24,14 @@ ColumnLayout {
         Rectangle {
             Layout.fillHeight: true
             Layout.fillWidth: true
-            color: "Cyan"
+            color: clientPage.squadClient ? "lightSkyBlue" : "limeGreen"
 
-            LittleHeadCustomer{
-
+            LittleHeadCustomer {
+                id: lHeadC
+                anchors.fill: parent
+                squad: clientPage.squadClient
+                satisfactionClient: clientPage.client_happy
             }
-
         }
     }
 
@@ -42,7 +44,6 @@ ColumnLayout {
         Rectangle {
             Layout.fillHeight: true
             Layout.fillWidth: true
-            color: "Purple"
 
             TextBox {
                 text: "Pour quelle raison ne souhaitez-vous pas contacter ce client"
@@ -61,7 +62,6 @@ ColumnLayout {
         Rectangle {
             Layout.fillHeight: true
             Layout.fillWidth: true
-            color: "NAVAJOWHITE"
 
             MyList {
                 id: listRaisons
@@ -81,7 +81,6 @@ ColumnLayout {
         Rectangle {
             Layout.fillHeight: true
             Layout.fillWidth: true
-            color: "SEAGREEN"
 
             MyButton {
                 text: "Enregistrer"
@@ -89,7 +88,6 @@ ColumnLayout {
                     console.log("Enregistrer")
                     clientPage.client4_visibility = false;
                     clientPage.client1_visibility = true;
-
                 }
                 anchors.centerIn: parent
             }

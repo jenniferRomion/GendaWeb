@@ -43,7 +43,7 @@ ColumnLayout {
         Rectangle {
             Layout.fillHeight: true
             Layout.fillWidth: true
-            color: "white"
+            color: "lightgrey"
 
             MyList{
                 id: listClients
@@ -64,7 +64,6 @@ ColumnLayout {
         Rectangle {
             Layout.fillHeight: true
             Layout.fillWidth: true
-            color: "lightGrey"
 
             MyButton {
                 text: "Détails"
@@ -72,6 +71,25 @@ ColumnLayout {
                     console.log("Détails")
                     clientPage.client1_visibility = false;
                     clientPage.client2_visibility = true;
+                }
+                anchors.centerIn: parent
+            }
+        }
+        // A virer
+        Rectangle {
+            Layout.fillHeight: true
+            Layout.fillWidth: true
+
+            MyButton {
+                text: "Type client"
+                onClicked: {
+                    if(clientPage.client_pm)
+                        clientPage.client_pm = false
+                    else
+                        clientPage.client_pm = true
+
+                    var typeClient = clientPage.client_pm ? "gendarme" : "civil"
+                    console.log("Type client : " + typeClient)
                 }
                 anchors.centerIn: parent
             }

@@ -24,12 +24,13 @@ ColumnLayout {
         Rectangle {
             Layout.fillHeight: true
             Layout.fillWidth: true
-            color: "limeGreen"
+            color: clientPage.client_pm? "royalBlue" : "limeGreen"
 
             HeaderCustomer {
                 id: headCust
-                gendarme : true
-                satisfaction: true
+                anchors.fill : parent
+                policeman: clientPage.client_pm
+                satisfactionClient: client_happy
             }
 
         }
@@ -72,9 +73,12 @@ ColumnLayout {
 
                             }
 
-                            textMiddleButton: "Visiter"
+                            textMiddleButton: "Contacter"
                             onMiddleClicked: {
-                                console.log("Visiter")
+                                console.log("Contacter")
+                                clientPage.client2_visibility = false;
+                                clientPage.client3_visibility = true;
+
                             }
 
                             textRightButton: "Ignorer"

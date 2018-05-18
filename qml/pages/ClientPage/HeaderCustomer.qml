@@ -11,15 +11,15 @@ RowLayout {
     Layout.fillHeight: true
     Layout.fillWidth: true
 
-    property bool gendarme /*: true*/
-    property bool satisfaction /*: true*/
+    property bool policeman /*: true*/
+    property bool satisfactionClient /*: true*/
 
     ColumnLayout {
         spacing: 0
         Layout.fillHeight: true
         Layout.fillWidth: true
 
-/*Customer Name */
+        /*Customer Name */
         RowLayout {
             spacing: 0
             Layout.fillWidth: true
@@ -28,12 +28,12 @@ RowLayout {
             Rectangle {
                 Layout.preferredWidth: 0.1 * root.width
                 Layout.preferredHeight: (1/2)*root.height
-                color: gendarme ? "royalBlue" : "limeGreen"
+                color: "transparent" //policeman ? "transparent"
 
                 Image {
                     width: parent.width
                     height: parent.height
-                    source: gendarme ? "../../../images/icon/gendarme_gris.png" : "../../../images/icon/infoClient.png"
+                    source: policeman ? "../../../images/icon/gendarme_gris.png" : "../../../images/icon/infoClient.png"
                     fillMode: Image.PreserveAspectFit
 
                     anchors.centerIn: parent
@@ -43,10 +43,10 @@ RowLayout {
             Rectangle {
                 Layout.preferredWidth: 0.7 * root.width
                 Layout.preferredHeight: (1/2)*root.height
-                color: gendarme ? "royalBlue" : "limeGreen"
+                color: "transparent"
 
                 TextBox {
-                    text: gendarme ? "Lt Weber Quentin" : "Nom Prénom"
+                    text: policeman ? "Lt Weber Quentin" : "Nom Prénom"
                     bold : true
                     color: "white"
                     anchors.centerIn: parent
@@ -54,18 +54,18 @@ RowLayout {
             }
         }
 
-/*Gendarmerie */
+        /*Gendarmerie */
         RowLayout {
             spacing: 0
             Layout.fillWidth: true
             Layout.preferredHeight: (1/4)*root.height
 
-            opacity: gendarme ? 1 : 0
+            opacity: policeman ? 1 : 0
 
             Rectangle {
                 Layout.preferredWidth: 0.1 * root.width
                 Layout.preferredHeight: (1/4)*root.height
-                color: gendarme ? "royalBlue" : "limeGreen"
+                color: "transparent"
 
                 Image {
                     width: parent.width
@@ -80,7 +80,7 @@ RowLayout {
             Rectangle {
                 Layout.preferredWidth: 0.7 * root.width
                 Layout.preferredHeight: (1/4)*root.height
-                color: gendarme ? "royalBlue" : "limeGreen"
+                color: "transparent"
 
                 TextBox {
                     text: "Gendarmerie de l'Hérault"
@@ -90,7 +90,7 @@ RowLayout {
             }
         }
 
-/* Position */
+        /* Position */
         RowLayout {
             spacing: 0
             Layout.fillWidth: true
@@ -99,12 +99,12 @@ RowLayout {
             Rectangle {
                 Layout.preferredWidth: 0.1 * root.width
                 Layout.preferredHeight: (1/4)*root.height
-                color: gendarme ? "royalBlue" : "limeGreen"
+                color: "transparent"
 
                 Image {
                     width: parent.width
                     height: parent.height
-                    source: gendarme ? "../../../images/icon/position_gendarme.png" : "../../../images/icon/position_blanc.png"
+                    source: policeman ? "../../../images/icon/position_gendarme.png" : "../../../images/icon/position_blanc.png"
                     fillMode: Image.PreserveAspectFit
 
                     anchors.centerIn: parent
@@ -114,7 +114,7 @@ RowLayout {
             Rectangle {
                 Layout.preferredWidth: 0.7 * root.width
                 Layout.preferredHeight: (1/4)*root.height
-                color: gendarme ? "royalBlue" : "limeGreen"
+                color: "transparent"
 
                 Text {
                     text: "000km _ 00000 VILLE"
@@ -127,7 +127,7 @@ RowLayout {
         }
     }
 
-/* Satisfaction */
+    /* satisfactionClient */
     ColumnLayout {
         spacing: 0
         Layout.fillHeight: true
@@ -136,7 +136,7 @@ RowLayout {
         Rectangle {
             Layout.fillHeight: true
             Layout.preferredWidth: 0.2 * root.width
-            color: gendarme ? "royalBlue" : "limeGreen"
+            color: "transparent"
 
             Rectangle {
                 height: 0.40 * root.height
@@ -144,12 +144,12 @@ RowLayout {
                 anchors.top: parent.verticalCenter
                 border.width: 0.005 * (root.width + (1/2)*root.height)
                 border.color: "SILVER"
-                color: gendarme ? "royalBlue" : "limeGreen"
+                color: "transparent"
 
                 Image {
                     width: parent.width
                     height: parent.height
-                    source: satisfaction ? "../../../images/icon/smiley.png" : "../../../images/icon/smiley_sad.png"
+                    source: satisfactionClient ? "../../../images/icon/smiley.png" : "../../../images/icon/smiley_sad.png"
                     fillMode: Image.PreserveAspectFit
 
                     anchors.centerIn: parent

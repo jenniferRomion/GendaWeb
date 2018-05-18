@@ -14,6 +14,9 @@ Page {
     property bool client3_visibility: false
     property bool client4_visibility: false
     property bool client5_visibility: false
+    property bool client_pm: true
+    property bool squadClient: client_pm ? true : false
+    property bool client_happy: true
 
 
 

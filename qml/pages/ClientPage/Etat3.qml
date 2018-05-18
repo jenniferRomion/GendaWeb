@@ -15,90 +15,94 @@ ColumnLayout {
 
     spacing: 0
 
-   Rectangle {
-            Layout.preferredHeight: 0.15 * root.height
-            Layout.fillWidth: true
-            Layout.bottomMargin: 0.01 * root.height
-            color: "red"
+    Rectangle {
+        Layout.preferredHeight: 0.15 * root.height
+        Layout.fillWidth: true
+        Layout.bottomMargin: 0.01 * root.height
+        color: clientPage.squadClient ? "lightSkyBlue" : "limeGreen"
 
-            LittleHeadCustomer {
-                id: lHeadC
+        LittleHeadCustomer {
+            id: lHeadC
+            anchors.fill: parent
+            squad: clientPage.squadClient
+            satisfactionClient: clientPage.client_happy
+        }
+    }
+
+    Rectangle {
+        Layout.fillHeight: true
+        Layout.fillWidth: true
+        Layout.margins: 0.01 * root.height
+        color: "green"
+
+        MyButton {
+            text: "Portable\n 06 88 56 44 25"
+            onClicked: {
+                console.log("Portable")
             }
-           }
+            anchors.fill: parent
+        }
+    }
 
-   Rectangle {
-       Layout.fillHeight: true
-       Layout.fillWidth: true
-       Layout.margins: 0.01 * root.height
-       color: "green"
+    Rectangle {
+        Layout.fillHeight: true
+        Layout.fillWidth: true
+        Layout.margins: 0.01 * root.height
+        color: "orange"
 
-       MyButton {
-           text: "Portable\n 06 88 56 44 25"
-           onClicked: {
-               console.log("Portable")
-           }
-           anchors.fill: parent
-       }
-   }
+        MyButton {
+            text: "Fixe\n 05 11 56 44 25"
+            onClicked: {
+                console.log("Fixe")
+            }
+            anchors.fill: parent
+        }
+    }
 
-   Rectangle {
-       Layout.fillHeight: true
-       Layout.fillWidth: true
-       Layout.margins: 0.01 * root.height
-       color: "orange"
-
-       MyButton {
-           text: "Fixe\n 05 11 56 44 25"
-           onClicked: {
-               console.log("Fixe")
-           }
-           anchors.fill: parent
-       }
-   }
-
-   Rectangle {
-       Layout.fillHeight: true
-       Layout.fillWidth: true
-       Layout.margins: 0.01 * root.height
-       color: "blue"
+    Rectangle {
+        Layout.fillHeight: true
+        Layout.fillWidth: true
+        Layout.margins: 0.01 * root.height
+        color: "blue"
 
 
-       MyButton {
-           text: "Mail\n user@wandoo.fr"
-           onClicked: {
-               console.log("Mail")
-           }
-           anchors.fill: parent
-       }
-   }
+        MyButton {
+            text: "Mail\n user@wandoo.fr"
+            onClicked: {
+                console.log("Mail")
+            }
+            anchors.fill: parent
+        }
+    }
 
-   Rectangle {
-       Layout.preferredHeight: 0.1 * root.height
-       Layout.fillWidth: true
-       Layout.topMargin:  0.01 * root.height
+    Rectangle {
+        Layout.preferredHeight: 0.1 * root.height
+        Layout.fillWidth: true
+        Layout.topMargin:  0.01 * root.height
 
-       RowTypeButton {
-           srcLeftIcon: "../../images/icon/back.png"
-           onLeftClicked: {
-               console.log("Vous retournez en arrière")
-               lHeadC.gendarmerie = false
-           }
+        RowTypeButton {
+            srcLeftIcon: "../../images/icon/back.png"
+            onLeftClicked: {
+                console.log("Vous retournez en arrière")
+                clientPage.client3_visibility = false;
+                clientPage.client4_visibility = true;
+            }
 
-           textMiddleButton: "Visiter"
-           onMiddleClicked: {
-               console.log("Nous préparons votre itinéraire")
-               lHeadC.gendarmerie = true
-           }
+            textMiddleButton: "Visiter"
+            onMiddleClicked: {
+                console.log("Nous préparons votre itinéraire")
+                clientPage.client3_visibility = false;
+                clientPage.client2_visibility = true;
+            }
 
-           textRightButton: "Rdv"
-           onRightClicked: {
-               console.log("Veuillez fixer votre rdv")
-               clientPage.client3_visibility = false;
-               clientPage.client4_visibility = true;
+            textRightButton: "Rdv"
+            onRightClicked: {
+                console.log("Veuillez fixer votre rdv")
+                clientPage.client3_visibility = false;
+                clientPage.client2_visibility = true;
+            }
+        }
 
-           }
-       }
-
-   }
+    }
 
 }
