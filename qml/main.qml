@@ -32,6 +32,17 @@ ApplicationWindow {
     property bool notificationActive: true
     property int distanceIndex: 2
 
+    /* Map datas */
+    property string addresseFrom: streetFrom + ", " + cityFrom + ", " + countryFrom
+    property string streetFrom: ""
+    property string cityFrom: ""
+    property string countryFrom: "France"
+
+    property string addresseTo : streetTo + ", " + cityTo + ", " + countryTo
+    property string streetTo: ""
+    property string cityTo: ""
+    property string countryTo: "France"
+
 
 
     visible: true

@@ -44,7 +44,7 @@ ColumnLayout {
         Rectangle {
             Layout.fillHeight: true
             Layout.fillWidth: true
-            color: "lightGrey"
+            color: colorMinor
 
             TextBox {
                 id : dayLabel

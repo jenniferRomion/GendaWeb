@@ -41,7 +41,6 @@ ColumnLayout {
 
         ColumnLayout {
             spacing : 0.02 * etat.height
-            //Layout.margins: 0.02 * etat.width
             Layout.fillHeight: true
             Layout.fillWidth: true
 

@@ -15,25 +15,39 @@ ColumnLayout {
 
     spacing: 0
 
-    /* space filler */
     RowLayout {
         spacing: 0
-        Layout.preferredHeight: (3/7)*parent.height
-        Layout.fillHeight: true
+        Layout.topMargin: 0.01 * mainPage.height
+        Layout.preferredHeight: (1/6)*parent.height
         Layout.fillWidth: true
 
         Rectangle {
             Layout.fillHeight: true
             Layout.fillWidth: true
-            //color: "white"
+            color: colorMinor
+
+            ItineraryHeader {}
         }
     }
 
 
     RowLayout {
         spacing: 0
-        Layout.preferredHeight: (1/7)*parent.height
         Layout.fillHeight: true
+        Layout.fillWidth: true
+        Layout.preferredHeight: (1/8) * mainPage.height
+
+        Rectangle {
+            Layout.fillHeight: true
+            Layout.fillWidth: true
+            color: "lightBlue"
+
+        }
+    }
+
+    RowLayout {
+        spacing: 0
+        Layout.preferredHeight: (1/8)*parent.height
         Layout.fillWidth: true
 
         Rectangle {
@@ -42,10 +56,10 @@ ColumnLayout {
             //color: "lightGrey"
 
             MyButton {
-                text : "Nouvelle Destination"
+                text : "temp" // réinitialiser ?
                 anchors.centerIn: parent
-                width: (9/10) * etat.width
-                height: parent.height
+                width: (1/3) * etat.width
+                height: (1/10) * etat.height
 
                 onClicked : {
                     itineraryPage.itinerary1_visibility = false
@@ -56,18 +70,7 @@ ColumnLayout {
         }
     }
 
-    /* space filler */
-    RowLayout {
-        spacing: 0
-        Layout.preferredHeight: (3/7)*parent.height
-        Layout.fillHeight: true
-        Layout.fillWidth: true
 
-        Rectangle {
-            Layout.fillHeight: true
-            Layout.fillWidth: true
-            //color: "lightBlue"
-        }
-    }
+
 
 }

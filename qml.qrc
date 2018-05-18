@@ -108,5 +108,13 @@
         <file>images/colorPicker/pink.png</file>
         <file>images/colorPicker/red.png</file>
         <file>qml/pages/ConfigurationPage/Etat2_color.qml</file>
+        <file>qml/pages/ItineraryPage/ItineraryHeader.qml</file>
+        <file>images/icon/circle.png</file>
+        <file>images/icon/marker.png</file>
+        <file>qml/pages/ItineraryPage/Etat3.qml</file>
+        <file>qml/pages/ItineraryPage/Etat4.qml</file>
+        <file>images/icon/pin.png</file>
+        <file>qml/pages/ItineraryPage/AddressForm.qml</file>
+        <file>images/icon/car.png</file>
     </qresource>
 </RCC>

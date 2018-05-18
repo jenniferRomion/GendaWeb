@@ -2,7 +2,6 @@ import QtQuick 2.9
 import QtQuick.Controls 2.2
 
 TextField {
-    id : label
     text : ""
 
     font.family: "Californian FB"
@@ -11,4 +10,10 @@ TextField {
     horizontalAlignment: TextInput.AlignHCenter
     verticalAlignment: TextInput.AlignVCenter
 
+    wrapMode: TextInput.Wrap
+    selectByMouse: true
+
+    onFocusChanged: if(focus) { selectAll() }
 }
+
+

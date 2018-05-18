@@ -15,93 +15,122 @@ ColumnLayout {
 
     spacing: 0
 
+    /* Header */
     RowLayout {
         spacing: 0
-        Layout.preferredHeight: (1/2)*parent.height
+        Layout.topMargin: 0.01 * mainPage.height
+        Layout.preferredHeight: (1/8)*parent.height
         Layout.fillHeight: true
         Layout.fillWidth: true
 
-        ColumnLayout {
-            spacing : 0.01 * etat.height
-            Layout.margins: 0.02 * etat.width
+        Rectangle {
             Layout.fillHeight: true
             Layout.fillWidth: true
+            Layout.preferredWidth: 0.10 * etat.width
+            color: colorMinor
 
-            Rectangle {
-                Layout.fillHeight: true
-                Layout.fillWidth: true
-                Layout.preferredHeight: (3/32)*etat.height
+            Image {
+                source : "../../../images/icon/pin.png"
+                height: 0.05 * mainPage.height
+                anchors.centerIn: parent
+                fillMode: Image.PreserveAspectFit
+            }
+        }
 
-                border.color: "#26282a"
-                border.width: 1
-                radius: 4
-                //color: "white"
+        Rectangle {
+            Layout.fillHeight: true
+            Layout.fillWidth: true
+            Layout.preferredWidth: 0.70 * etat.width
+            color: colorMinor
 
-                TextBox {
-                    id : dayLabel
-                    anchors.centerIn: parent
-                    bold : true
-                    text: Qt.locale().standaloneDayName(calendarPage.currentDate.getDay(), Locale.LongFormat)
-                          + " "
-                          + calendarPage.currentDate.getDate()
-                          + " "
-                          + Qt.locale().standaloneMonthName(calendarPage.currentDate.getMonth())
-                          + calendarPage.currentDate.toLocaleDateString(Qt.locale(), " yyyy")
-                          + " _ "
-                          + calendarPage.rdvTime
+            TextBox {
+                bold : true
+                horizontalAlignment: Text.AlignLeft
+                text: Qt.locale().standaloneDayName(calendarPage.currentDate.getDay(), Locale.LongFormat)
+                      + " "
+                      + calendarPage.currentDate.getDate()
+                      + " "
+                      + Qt.locale().standaloneMonthName(calendarPage.currentDate.getMonth())
+                      + calendarPage.currentDate.toLocaleDateString(Qt.locale(), " yyyy")
+                      + " _ "
+                      + calendarPage.rdvTime
+            }
+        }
+
+        Rectangle {
+            Layout.fillHeight: true
+            Layout.fillWidth: true
+            Layout.preferredWidth: 0.20 * etat.width
+            color: colorMinor
+
+            HeaderButtonReturn {
+                onClicked: {
+                    calendarPage.calendar1_visibility = true;
+                    calendarPage.calendar2_visibility = false;
                 }
             }
-
-            Rectangle {
-                Layout.fillHeight: true
-                Layout.fillWidth: true
-                Layout.preferredHeight: (1/4)*etat.height
-
-                radius: 4
-                color: "darkBlue" // a modifier selon type de customer
-
-                TextBox {
-                    id : customerLabel
-                    horizontalAlignment: Text.AlignLeft
-                    bold : true
-                    color : "white"
-
-                    text: "Weber" + " " + "Quentin" + "\n"
-                          + "00.00.00.00.00" + "\n"
-                          + "13 rue de l'argonne 45 000 ORLEANS"
-
-                    //elweb.int_propect.prosp_nom + " " + elweb.int_propect.prosp_prenom
-                    //si slsav.customer.numslweb ok
-                    //slsav.customers.phoneprimary || phonesecondary
-                    //slsav.customerAdresses
-
-                    //sinon
-                    //elweb.int_propect.prosp_adressedom + " " + prosp_cpdom + " " + prosp_villedom
-                }
-            }
-
-            Rectangle {
-                Layout.fillHeight: true
-                Layout.fillWidth: true
-                Layout.preferredHeight: (3/32)*etat.height
-
-                border.color: "#26282a"
-                border.width: 1
-                radius: 4
-                //color: "blue"
-
-                TextBox {
-                    id : rdvType
-                    horizontalAlignment: Text.AlignLeft
-
-                    text: "R1 _ Etude à présenter"
-                    //elweb.int_rdvtype.libelle + " _ " + elweb.int_etatrdv.rdv_libelle
-                }
-            }
-
         }
     }
 
+    /* customer */
+    RowLayout {
+        spacing: 0
+        Layout.topMargin: 0.01 * mainPage.height
+        Layout.preferredHeight: (2/8)*parent.height
+        Layout.fillHeight: true
+        Layout.fillWidth: true
+
+        Rectangle {
+            Layout.fillHeight: true
+            Layout.fillWidth: true
+            Layout.leftMargin: 0.01 * mainPage.width
+            Layout.rightMargin: 0.01 * mainPage.width
+            radius: 4
+            color: "royalBlue" // a modifier selon type de customer
+
+            TextBox {
+                id : customerLabel
+                horizontalAlignment: Text.AlignLeft
+                bold : true
+                color : "white"
+
+                text: "Weber" + " " + "Quentin" + "\n"
+                      + "00.00.00.00.00" + "\n"
+                      + "13 rue de l'argonne 45 000 ORLEANS"
+
+                //elweb.int_propect.prosp_nom + " " + elweb.int_propect.prosp_prenom
+                //si slsav.customer.numslweb ok
+                //slsav.customers.phoneprimary || phonesecondary
+                //slsav.customerAdresses
+
+                //sinon
+                //elweb.int_propect.prosp_adressedom + " " + prosp_cpdom + " " + prosp_villedom
+            }
+        }
+    }
+
+    /* Rdv label */
+    RowLayout {
+        spacing: 0
+        Layout.topMargin: 0.01 * mainPage.height
+        Layout.preferredHeight: (1/8)*parent.height
+        Layout.fillHeight: true
+        Layout.fillWidth: true
+
+        Rectangle {
+            Layout.fillHeight: true
+            Layout.fillWidth: true
+            //color: "blue"
+
+            TextBox {
+                id : rdvType
+                bold : true
+                underline : true
+                text: "R1 - Etude à présenter"
+                //elweb.int_rdvtype.libelle + " _ " + elweb.int_etatrdv.rdv_libelle
+            }
+        }
+    }
 
     /* RDV informations */
     RowLayout {
@@ -125,7 +154,7 @@ ColumnLayout {
                 text: "<b>Commentaire commercial : </b>"
                       + "\n" + "\n"
                       + "R 06/10/2017  Tel au siège pr info et rdv conforté par SOLIGNAC Jérôme"
-                      //elweb.int_prospect.prosp_obserCcial
+                //elweb.int_prospect.prosp_obserCcial
             }
         }
     }
@@ -136,24 +165,6 @@ ColumnLayout {
         Layout.preferredHeight: (1/8)*parent.height
         Layout.fillHeight: true
         Layout.fillWidth: true
-
-        Rectangle {
-            Layout.fillHeight: true
-            Layout.fillWidth: true
-            //color: "lightBlue"
-
-            MyButton {
-                srcIcon: "../../../images/icon/arrow_left.png"
-                anchors.centerIn: parent
-                width: (1/3) * etat.width
-                height: (1/10) * etat.height
-
-                onClicked: {
-                    calendarPage.calendar1_visibility = true;
-                    calendarPage.calendar2_visibility = false;
-                }
-            }
-        }
 
         Rectangle {
             Layout.fillHeight: true

@@ -31,7 +31,7 @@ ColumnLayout {
             Layout.fillHeight: true
             Layout.fillWidth: true
             Layout.preferredWidth: 0.10 * etat.width
-            color: "lightGrey"
+            color: colorMinor
 
             Image {
                 source : "../../../images/icon/color.png"
@@ -45,7 +45,7 @@ ColumnLayout {
             Layout.fillHeight: true
             Layout.fillWidth: true
             Layout.preferredWidth: 0.70 * etat.width
-            color: "lightGrey"
+            color: colorMinor
 
             TextBox {
                 text : "Couleurs d'affichage"
@@ -58,12 +58,12 @@ ColumnLayout {
             Layout.fillHeight: true
             Layout.fillWidth: true
             Layout.preferredWidth: 0.20 * etat.width
-            color: "lightgrey"
+            color: colorMinor
 
             HeaderButtonReturn {
                 onClicked: {
                     console.log("ok")
-                    configurationPage.config_visibility2_avatar = false
+                    configurationPage.config_visibility2_color = false
                     configurationPage.config_visibility2 = true
                 }
             }
