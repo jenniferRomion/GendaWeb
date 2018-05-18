@@ -42,7 +42,7 @@ RowLayout{
         Layout.fillHeight: true
         Layout.maximumWidth: (1/3) * parent.width
         Layout.leftMargin: 0.03 * parent.width
-        
+
         MyButton{
             id: leftButton
             width: parent.width
@@ -52,7 +52,7 @@ RowLayout{
             onClicked: rowTypeButton.leftClicked()
         }
     }
-    
+
     Rectangle{
         Layout.fillWidth: true
         Layout.fillHeight: true
@@ -68,7 +68,7 @@ RowLayout{
             onClicked: rowTypeButton.middleClicked()
         }
     }
-    
+
     Rectangle{
         Layout.fillWidth: true
         Layout.fillHeight: true

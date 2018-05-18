@@ -9,8 +9,8 @@ import "ClientPage"
 Page {
     id : clientPage
 
-    property bool client1_visibility: false
-    property bool client2_visibility: true
+    property bool client1_visibility: true
+    property bool client2_visibility: false
     property bool client3_visibility: false
     property bool client4_visibility: false
     property bool client5_visibility: false
@@ -43,12 +43,6 @@ Page {
             id : etat4
             visible: client4_visibility
         }
-
-        Etat5 {
-            id : etat5
-            visible: client5_visibility
-        }
-
 }
 
 

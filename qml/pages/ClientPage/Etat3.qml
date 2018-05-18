@@ -93,6 +93,9 @@ ColumnLayout {
            textRightButton: "Rdv"
            onRightClicked: {
                console.log("Veuillez fixer votre rdv")
+               clientPage.client3_visibility = false;
+               clientPage.client4_visibility = true;
+
            }
        }
 

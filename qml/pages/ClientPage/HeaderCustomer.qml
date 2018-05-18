@@ -11,14 +11,15 @@ RowLayout {
     Layout.fillHeight: true
     Layout.fillWidth: true
 
-    property bool gendarme : true
-    property bool satisfaction : true
+    property bool gendarme /*: true*/
+    property bool satisfaction /*: true*/
 
     ColumnLayout {
         spacing: 0
         Layout.fillHeight: true
         Layout.fillWidth: true
 
+/*Customer Name */
         RowLayout {
             spacing: 0
             Layout.fillWidth: true
@@ -27,7 +28,7 @@ RowLayout {
             Rectangle {
                 Layout.preferredWidth: 0.1 * root.width
                 Layout.preferredHeight: (1/2)*root.height
-                color: gendarme ? "royalBlue" : "#0aa705"
+                color: gendarme ? "royalBlue" : "limeGreen"
 
                 Image {
                     width: parent.width
@@ -42,7 +43,7 @@ RowLayout {
             Rectangle {
                 Layout.preferredWidth: 0.7 * root.width
                 Layout.preferredHeight: (1/2)*root.height
-                color: gendarme ? "royalBlue" : "#0aa705"
+                color: gendarme ? "royalBlue" : "limeGreen"
 
                 TextBox {
                     text: gendarme ? "Lt Weber Quentin" : "Nom Prénom"
@@ -53,6 +54,7 @@ RowLayout {
             }
         }
 
+/*Gendarmerie */
         RowLayout {
             spacing: 0
             Layout.fillWidth: true
@@ -63,7 +65,7 @@ RowLayout {
             Rectangle {
                 Layout.preferredWidth: 0.1 * root.width
                 Layout.preferredHeight: (1/4)*root.height
-                color: gendarme ? "royalBlue" : "#0aa705"
+                color: gendarme ? "royalBlue" : "limeGreen"
 
                 Image {
                     width: parent.width
@@ -78,7 +80,7 @@ RowLayout {
             Rectangle {
                 Layout.preferredWidth: 0.7 * root.width
                 Layout.preferredHeight: (1/4)*root.height
-                color: gendarme ? "royalBlue" : "#0aa705"
+                color: gendarme ? "royalBlue" : "limeGreen"
 
                 TextBox {
                     text: "Gendarmerie de l'Hérault"
@@ -88,6 +90,7 @@ RowLayout {
             }
         }
 
+/* Position */
         RowLayout {
             spacing: 0
             Layout.fillWidth: true
@@ -96,7 +99,7 @@ RowLayout {
             Rectangle {
                 Layout.preferredWidth: 0.1 * root.width
                 Layout.preferredHeight: (1/4)*root.height
-                color: gendarme ? "royalBlue" : "#0aa705"
+                color: gendarme ? "royalBlue" : "limeGreen"
 
                 Image {
                     width: parent.width
@@ -111,7 +114,7 @@ RowLayout {
             Rectangle {
                 Layout.preferredWidth: 0.7 * root.width
                 Layout.preferredHeight: (1/4)*root.height
-                color: gendarme ? "royalBlue" : "#0aa705"
+                color: gendarme ? "royalBlue" : "limeGreen"
 
                 Text {
                     text: "000km _ 00000 VILLE"
@@ -124,6 +127,7 @@ RowLayout {
         }
     }
 
+/* Satisfaction */
     ColumnLayout {
         spacing: 0
         Layout.fillHeight: true
@@ -132,7 +136,7 @@ RowLayout {
         Rectangle {
             Layout.fillHeight: true
             Layout.preferredWidth: 0.2 * root.width
-            color: gendarme ? "royalBlue" : "#0aa705"
+            color: gendarme ? "royalBlue" : "limeGreen"
 
             Rectangle {
                 height: 0.40 * root.height
@@ -140,7 +144,7 @@ RowLayout {
                 anchors.top: parent.verticalCenter
                 border.width: 0.005 * (root.width + (1/2)*root.height)
                 border.color: "SILVER"
-                color: gendarme ? "royalBlue" : "#0aa705"
+                color: gendarme ? "royalBlue" : "limeGreen"
 
                 Image {
                     width: parent.width

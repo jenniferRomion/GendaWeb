@@ -15,52 +15,84 @@ ColumnLayout {
 
     spacing: 0
 
-   Rectangle {
-       Layout.preferredHeight: 0.15 * root.height
-       Layout.fillWidth: true
+    RowLayout {
+        spacing: 0
+        Layout.preferredHeight: (1/6)*parent.height
+        Layout.fillHeight: true
+        Layout.fillWidth: true
 
-       color: "Cyan"
+        Rectangle {
+            Layout.fillHeight: true
+            Layout.fillWidth: true
+            color: "Cyan"
 
-   }
+            LittleHeadCustomer{
 
-   Rectangle {
-       Layout.preferredHeight: 0.1 * root.height
-       Layout.fillWidth: true
+            }
 
-       color: "Purple"
+        }
+    }
 
-   }
+    RowLayout {
+        spacing: 0
+        Layout.preferredHeight: (1/15)*parent.height
+        Layout.fillHeight: true
+        Layout.fillWidth: true
 
-   Rectangle {
-       Layout.fillHeight: true
-       Layout.fillWidth: true
+        Rectangle {
+            Layout.fillHeight: true
+            Layout.fillWidth: true
+            color: "Purple"
 
-       color: "NAVAJOWHITE"
+            TextBox {
+                text: "Pour quelle raison ne souhaitez-vous pas contacter ce client"
+                font.pixelSize: Qt.application.font.pixelSize * 1.3
+                horizontalAlignment: Text.left
+            }
+        }
+    }
 
-   }
+    RowLayout {
+        spacing: 0
+        Layout.preferredHeight: (1/3)*parent.height
+        Layout.fillHeight: true
+        Layout.fillWidth: true
 
-   Rectangle {
-       Layout.fillHeight: true
-       Layout.fillWidth: true
+        Rectangle {
+            Layout.fillHeight: true
+            Layout.fillWidth: true
+            color: "NAVAJOWHITE"
 
-       color: "MAROON"
+            MyList {
+                id: listRaisons
+                model : DelegateRaisons {
+                    view: listRaisons
+                }
+            }
+        }
+    }
 
-   }
+    RowLayout {
+        spacing: 0
+        Layout.preferredHeight: (1/15)*parent.height
+        Layout.fillHeight: true
+        Layout.fillWidth: true
 
-   Rectangle {
-       Layout.fillHeight: true
-       Layout.fillWidth: true
+        Rectangle {
+            Layout.fillHeight: true
+            Layout.fillWidth: true
+            color: "SEAGREEN"
 
-       color: "PERU"
+            MyButton {
+                text: "Enregistrer"
+                onClicked: {
+                    console.log("Enregistrer")
+                    clientPage.client4_visibility = false;
+                    clientPage.client1_visibility = true;
 
-   }
-
-   Rectangle {
-       Layout.preferredHeight: 0.1 * root.height
-       Layout.fillWidth: true
-
-       color: "SEAGREEN"
-
-   }
-
+                }
+                anchors.centerIn: parent
+            }
+        }
+    }
 }

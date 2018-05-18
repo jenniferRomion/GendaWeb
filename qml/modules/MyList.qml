@@ -1,49 +1,21 @@
-import QtQuick 2.0
+import QtQuick 2.9
+import QtQuick.Controls 2.2
 import QtQuick.Layouts 1.1
-import "../javascript/ColumnHelper.js" as ColumnHelper
+import QtQuick.Controls.Styles 1.2
 
-Rectangle {
-    id : myListView
+ListView {
+    id: idListView
 
-    property variant columnWidths: ColumnHelper.calcColumnWidths(model, list)
+    anchors { fill: parent; margins: 2 }
 
-    /*  ListModel {
-            id: unModel
-            ListElement {
-                nomClient : "";
-                contactClient : "";
-                produit : "";
-                lieuProduit : "";
-                satisfactionClient : "";
-            }
-        }*/
+    highlight: Rectangle { color: "lightGrey" /*colorMajor */; radius : 4 }
+    focus: true
+    spacing: 4
 
+    //model: DelegateRaisons {}
 
-    ListView {
-        id : list
-        anchors { fill: parent; margins: 2 }
-
-        model: MyModel{}
-//        delegate: DelegateComponent{}
-
-        highlight: Rectangle { color: 'lightblue' ; radius : 4 }
-        focus: true
-        onCurrentItemChanged: {
-
-        }
-
-        spacing: 4
-
-        /*header: Row{
-            spacing: parent.width*0.1
-            width: view.width
-            height: view.height * 0.15
-            Text{ text: "Client"}
-            Text{ text: "Contact"}
-            Text{ text: "Produit"}
-            Text{ text: "Position"}
-            Text{ text: "Satisfaction"}
-        }*/
+    onCurrentIndexChanged: {
+        console.log(currentIndex)
     }
 }
 

@@ -24,13 +24,14 @@ ColumnLayout {
         Rectangle {
             Layout.fillHeight: true
             Layout.fillWidth: true
-            color: "white"
+            color: "limeGreen"
 
-            HeadCust {
-                id: headC
-                width : etat.width
-                gendarme: true
+            HeaderCustomer {
+                id: headCust
+                gendarme : true
+                satisfaction: true
             }
+
         }
     }
 
@@ -45,11 +46,7 @@ ColumnLayout {
             Layout.fillWidth: true
             color: "lightGrey"
 
-            Text {
-                width: parent
-                height: parent
-                anchors.centerIn: parent
-
+            TextBox {
                 text: "Some details"
             }
         }
@@ -66,25 +63,27 @@ ColumnLayout {
             Layout.fillWidth: true
             color: "lightGrey"
 
-
             RowTypeButton {
-                srcLeftIcon: "../../images/icon/back.png"
-                onLeftClicked: {
-                    console.log("BACK")
-                }
+                            srcLeftIcon: "../../images/icon/back.png"
+                            onLeftClicked: {
+                                console.log("BACK")
+                                clientPage.client2_visibility = false;
+                                clientPage.client1_visibility = true;
 
-                textMiddleButton: "Visiter"
-                onMiddleClicked: {
-                    console.log("Visiter")
-                    headC.gendarme = false;
-                }
+                            }
 
-                textRightButton: "Ignorer"
-                onRightClicked: {
-                    console.log("Ignorer")
-                    headC.gendarme = true
-                }
-            }
+                            textMiddleButton: "Visiter"
+                            onMiddleClicked: {
+                                console.log("Visiter")
+                            }
+
+                            textRightButton: "Ignorer"
+                            onRightClicked: {
+                                console.log("Ignorer")
+                                clientPage.client2_visibility = false;
+                                clientPage.client4_visibility = true;
+                            }
+                        }
         }
     }
 }
