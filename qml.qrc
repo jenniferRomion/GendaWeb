@@ -145,5 +145,7 @@
         <file>images/icon/pin.png</file>
         <file>qml/pages/ItineraryPage/AddressForm.qml</file>
         <file>images/icon/car.png</file>
+        <file>qml/pages/ItineraryPage/ModelItinerary.qml</file>
+        <file>qml/pages/ItineraryPage/DelegateItineraries.qml</file>
     </qresource>
 </RCC>
