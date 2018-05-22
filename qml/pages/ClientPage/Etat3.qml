@@ -7,102 +7,145 @@ import "../../modules"
 
 ColumnLayout {
 
-    id : root
+    id : etat
 
     anchors.fill: parent
     Layout.fillHeight: true
     Layout.fillWidth: true
-
     spacing: 0
 
-    Rectangle {
-        Layout.preferredHeight: 0.15 * root.height
-        Layout.fillWidth: true
-        Layout.bottomMargin: 0.01 * root.height
-        color: clientPage.squadClient ? "lightSkyBlue" : "limeGreen"
 
-        LittleHeadCustomer {
-            id: lHeadC
-            anchors.fill: parent
-            squad: clientPage.squadClient
-            satisfactionClient: clientPage.client_happy
-        }
-    }
-
-    Rectangle {
+    /* Header */
+    RowLayout {
+        spacing: 0
+        Layout.topMargin: 0.01 * mainPage.height
+        Layout.preferredHeight: (1/4)*parent.height
         Layout.fillHeight: true
         Layout.fillWidth: true
-        Layout.margins: 0.01 * root.height
-        color: "green"
 
-        MyButton {
-            text: "Portable\n 06 88 56 44 25"
-            onClicked: {
-                console.log("Portable")
+        Rectangle {
+            Layout.fillHeight: true
+            Layout.fillWidth: true
+            color: clientPage.client_gendarme ? colorGendarme : colorSimpleClient
+
+            HeaderCustomer {
+                page : 3
             }
-            anchors.fill: parent
         }
     }
 
-    Rectangle {
+    /* Contact Actions */
+    RowLayout {
+        spacing: 0
+        Layout.preferredHeight: (5/8) * parent.height
         Layout.fillHeight: true
         Layout.fillWidth: true
-        Layout.margins: 0.01 * root.height
-        color: "orange"
 
-        MyButton {
-            text: "Fixe\n 05 11 56 44 25"
-            onClicked: {
-                console.log("Fixe")
+        ColumnLayout {
+            spacing: 0.02 * etat.height
+            Layout.fillHeight: true
+            Layout.fillWidth: true
+
+            Rectangle {
+                Layout.fillHeight: true
+                Layout.fillWidth: true
+                //color: "green"
+
+                ContactButton {
+                    text : "Portable\n" + clientPage.client_mobile
+                    width: 0.95 * etat.width
+                    height : 1/6 * etat.height
+                    anchors.centerIn: parent
+
+                    onClicked: {
+                        console.log("calling action")
+                    }
+                }
             }
-            anchors.fill: parent
+
+            Rectangle {
+                Layout.fillHeight: true
+                Layout.fillWidth: true
+                //color: "green"
+
+                ContactButton {
+                    text : "Fix\n" + clientPage.client_phone
+                    width: 0.95 * etat.width
+                    height : 1/6 * etat.height
+                    anchors.centerIn: parent
+
+                    onClicked: {
+                        console.log("calling action")
+                    }
+                }
+            }
+
+            Rectangle {
+                Layout.fillHeight: true
+                Layout.fillWidth: true
+                //color: "green"
+
+                ContactButton {
+                    text : "E-Mail\n" + clientPage.client_mail
+                    width: 0.95 * etat.width
+                    height : 1/6 * etat.height
+                    anchors.centerIn: parent
+
+                    onClicked: {
+                        console.log("mailing action")
+                    }
+                }
+            }
+
         }
     }
 
-    Rectangle {
+
+    /* Buttons */
+    RowLayout {
+        spacing: 0
+        Layout.preferredHeight: (1/8)*parent.height
         Layout.fillHeight: true
         Layout.fillWidth: true
-        Layout.margins: 0.01 * root.height
-        color: "blue"
 
+        Rectangle {
+            Layout.fillHeight: true
+            Layout.fillWidth: true
+            //color: "lightGrey"
 
-        MyButton {
-            text: "Mail\n user@wandoo.fr"
-            onClicked: {
-                console.log("Mail")
-            }
-            anchors.fill: parent
-        }
-    }
+            MyButton {
+                text : "Rendez-vous"
+                anchors.centerIn: parent
+                width: (1/3) * etat.width
+                height: (1/10) * etat.height
 
-    Rectangle {
-        Layout.preferredHeight: 0.1 * root.height
-        Layout.fillWidth: true
-        Layout.topMargin:  0.01 * root.height
-
-        RowTypeButton {
-            srcLeftIcon: "../../images/icon/back.png"
-            onLeftClicked: {
-                console.log("Vous retournez en arrière")
-                clientPage.client3_visibility = false;
-                clientPage.client4_visibility = true;
-            }
-
-            textMiddleButton: "Visiter"
-            onMiddleClicked: {
-                console.log("Nous préparons votre itinéraire")
-                clientPage.client3_visibility = false;
-                clientPage.client2_visibility = true;
-            }
-
-            textRightButton: "Rdv"
-            onRightClicked: {
-                console.log("Veuillez fixer votre rdv")
-                clientPage.client3_visibility = false;
-                clientPage.client2_visibility = true;
+                onClicked : {
+                    console.log("Veuillez fixer votre rdv")
+                    //                    clientPage.client3_visibility = false;
+                    //                    clientPage.client2_visibility = true;
+                }
             }
         }
 
+        Rectangle {
+            Layout.fillHeight: true
+            Layout.fillWidth: true
+            //color: "lightGrey"
+
+            MyButton {
+                text : "Visiter"
+                anchors.centerIn: parent
+                width: (1/3) * etat.width
+                height: (1/10) * etat.height
+
+                onClicked : {
+                    console.log("Nous préparons votre itinéraire")
+                    //                    clientPage.client3_visibility = false;
+                    //                    clientPage.client2_visibility = true;
+                }
+            }
+        }
     }
+
 
 }

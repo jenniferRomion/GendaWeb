@@ -50,7 +50,6 @@
         <file>images/icon/smiley.png</file>
         <file>qml/modules/Test.qml</file>
         <file>images/icon/infoClient.png</file>
-        <file>qml/pages/ClientPage/TestH.qml</file>
         <file>qml/pages/ClientPage/ContactButton.qml</file>
         <file>images/icon/back.png</file>
         <file>images/icon/gendflam.png</file>
@@ -145,5 +144,10 @@
         <file>images/icon/pin.png</file>
         <file>qml/pages/ItineraryPage/AddressForm.qml</file>
         <file>images/icon/car.png</file>
+        <file>images/icon/update.png</file>
+        <file>qml/modules/HeaderButtonUpdate.qml</file>
+        <file>images/icon/smiley_green.png</file>
+        <file>images/icon/gendarme.png</file>
+        <file>images/icon/smiley_red.png</file>
     </qresource>
 </RCC>

@@ -26,6 +26,7 @@ ColumnLayout {
         Layout.preferredHeight: (1/8)*parent.height
         Layout.fillHeight: true
         Layout.fillWidth: true
+        z : 3
 
         Rectangle {
             Layout.fillHeight: true
@@ -78,6 +79,7 @@ ColumnLayout {
         Layout.preferredHeight: (3/8)*parent.height
         Layout.fillHeight: true
         Layout.fillWidth: true
+        z : 0
 
         Rectangle {
             Layout.fillHeight: true
@@ -99,6 +101,7 @@ ColumnLayout {
         Layout.preferredHeight: (3/8)*parent.height
         Layout.fillHeight: true
         Layout.fillWidth: true
+        z : 3
 
         Rectangle {
             Layout.fillHeight: true

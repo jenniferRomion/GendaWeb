@@ -8,7 +8,7 @@ import QtQml.Models 2.2
 
 DelegateModel {
 
-    model: ModelClients{}
+    model: ModelClients {}
 
     property ListView view
 
@@ -16,7 +16,8 @@ DelegateModel {
 
         Item {
             width: parent.width
-            height: row.implicitHeight + 0.01 * mainPage.height
+            //height: row.implicitHeight + 0.01 * mainPage.height
+            height: 1/16 * mainPage.height
 
             Row {
                 id: row
@@ -24,22 +25,23 @@ DelegateModel {
 
 
                 Image {
-                    source: gendarme ? "../../../images/icon/gendarme.png" : "../../../images/icon/infoClient.png"
+                    source: gendarme ? "../../../images/icon/gendarme.png" : "../../../images/icon/user.png"
                     height: parent.height
                     width: 0.1 * parent.width
                     fillMode: Image.PreserveAspectFit
                 }
 
-                TextBox {
+                Text {
                     id: client
                     width: 0.8 * parent.width
-                    text: nomClient
+                    text: name
                     font.family: "acumin-pro"
                     font.pixelSize: Qt.application.font.pixelSize * 1.25
+                    anchors.verticalCenter: parent.verticalCenter
                 }
 
                 Image {
-                    source: satisfaction ? "../../../images/icon/smiley.png" : "../../../images/icon/smiley_sad.png"
+                    source: satisfaction ? "../../../images/icon/smiley_green.png" : "../../../images/icon/smiley_red.png"
                     fillMode: Image.PreserveAspectFit
                     height: parent.height
                     width: 0.1 * parent.width
@@ -55,8 +57,6 @@ DelegateModel {
             }
 
         }
-
-
-
     }
+
 }
