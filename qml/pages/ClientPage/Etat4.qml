@@ -7,7 +7,7 @@ import "../../modules"
 
 ColumnLayout {
 
-    id : root
+    id : etat
 
     anchors.fill: parent
     Layout.fillHeight: true
@@ -15,29 +15,30 @@ ColumnLayout {
 
     spacing: 0
 
+
+    /* Header */
     RowLayout {
         spacing: 0
-        Layout.preferredHeight: (1/6)*parent.height
+        Layout.topMargin: 0.01 * mainPage.height
+        Layout.preferredHeight: (1/4)*parent.height
         Layout.fillHeight: true
         Layout.fillWidth: true
 
         Rectangle {
             Layout.fillHeight: true
             Layout.fillWidth: true
-            color: clientPage.squadClient ? "lightSkyBlue" : "limeGreen"
+            color: clientPage.client_gendarme ? colorGendarme : colorSimpleClient
 
-            LittleHeadCustomer {
-                id: lHeadC
-                anchors.fill: parent
-                squad: clientPage.squadClient
-                satisfactionClient: clientPage.client_happy
+            HeaderCustomer {
+                page : 0
             }
         }
     }
 
+    /* Label */
     RowLayout {
         spacing: 0
-        Layout.preferredHeight: (1/15)*parent.height
+        Layout.preferredHeight: (1/8)*parent.height
         Layout.fillHeight: true
         Layout.fillWidth: true
 
@@ -46,16 +47,17 @@ ColumnLayout {
             Layout.fillWidth: true
 
             TextBox {
-                text: "Pour quelle raison ne souhaitez-vous pas contacter ce client"
+                text: "Pour quelle raison ne souhaitez-vous pas contacter ce client ?"
                 font.pixelSize: Qt.application.font.pixelSize * 1.3
                 horizontalAlignment: Text.left
             }
         }
     }
 
+    /* List of Reasons */
     RowLayout {
         spacing: 0
-        Layout.preferredHeight: (1/3)*parent.height
+        Layout.preferredHeight: (1/2)*parent.height
         Layout.fillHeight: true
         Layout.fillWidth: true
 
@@ -72,9 +74,11 @@ ColumnLayout {
         }
     }
 
+
+    /* Button */
     RowLayout {
         spacing: 0
-        Layout.preferredHeight: (1/15)*parent.height
+        Layout.preferredHeight: (1/8)*parent.height
         Layout.fillHeight: true
         Layout.fillWidth: true
 
@@ -83,14 +87,19 @@ ColumnLayout {
             Layout.fillWidth: true
 
             MyButton {
+                anchors.centerIn: parent
+                width: (1/3) * etat.width
+                height: (1/10) * etat.height
                 text: "Enregistrer"
+
                 onClicked: {
                     console.log("Enregistrer")
                     clientPage.client4_visibility = false;
-                    clientPage.client1_visibility = true;
+                    clientPage.client2_visibility = true;
                 }
-                anchors.centerIn: parent
             }
         }
     }
+
+
 }

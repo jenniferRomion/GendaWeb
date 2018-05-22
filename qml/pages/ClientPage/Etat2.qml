@@ -12,11 +12,13 @@ ColumnLayout {
     anchors.fill: parent
     Layout.fillHeight: true
     Layout.fillWidth: true
-
     spacing: 0
+
+    /* Header */
 
     RowLayout {
         spacing: 0
+        Layout.topMargin: 0.01 * mainPage.height
         Layout.preferredHeight: (1/4)*parent.height
         Layout.fillHeight: true
         Layout.fillWidth: true
@@ -24,18 +26,16 @@ ColumnLayout {
         Rectangle {
             Layout.fillHeight: true
             Layout.fillWidth: true
-            color: clientPage.client_pm? "royalBlue" : "limeGreen"
+            color: clientPage.client_gendarme ? colorGendarme : colorSimpleClient
 
             HeaderCustomer {
-                id: headCust
-                anchors.fill : parent
-                policeman: clientPage.client_pm
-                satisfactionClient: client_happy
+                page : 2
             }
-
         }
     }
 
+
+    /* Client's datas */
     RowLayout {
         spacing: 0
         Layout.preferredHeight: (5/8)*parent.height
@@ -45,10 +45,10 @@ ColumnLayout {
         Rectangle {
             Layout.fillHeight: true
             Layout.fillWidth: true
-            color: "lightGrey"
+            //color: "lightGrey"
 
             TextBox {
-                text: "Some details"
+                text: "details"
             }
         }
     }
@@ -62,32 +62,40 @@ ColumnLayout {
         Rectangle {
             Layout.fillHeight: true
             Layout.fillWidth: true
-            color: "lightGrey"
+            //color: "lightGrey"
 
-            RowTypeButton {
-                            srcLeftIcon: "../../images/icon/back.png"
-                            onLeftClicked: {
-                                console.log("BACK")
-                                clientPage.client2_visibility = false;
-                                clientPage.client1_visibility = true;
+            MyButton {
+                text : "Contacter"
+                anchors.centerIn: parent
+                width: (1/3) * etat.width
+                height: (1/10) * etat.height
 
-                            }
+                onClicked : {
+                    clientPage.client2_visibility = false;
+                    clientPage.client3_visibility = true;
+                }
+            }
+        }
 
-                            textMiddleButton: "Contacter"
-                            onMiddleClicked: {
-                                console.log("Contacter")
-                                clientPage.client2_visibility = false;
-                                clientPage.client3_visibility = true;
+        Rectangle {
+            Layout.fillHeight: true
+            Layout.fillWidth: true
+            //color: "lightGrey"
 
-                            }
+            MyButton {
+                text : "Visiter"
+                anchors.centerIn: parent
+                width: (1/3) * etat.width
+                height: (1/10) * etat.height
 
-                            textRightButton: "Ignorer"
-                            onRightClicked: {
-                                console.log("Ignorer")
-                                clientPage.client2_visibility = false;
-                                clientPage.client4_visibility = true;
-                            }
-                        }
+                onClicked : {
+                    //                    clientPage.client2_visibility = false;
+                    //                    clientPage.client3_visibility = true;
+                }
+            }
         }
     }
+
+
 }
+

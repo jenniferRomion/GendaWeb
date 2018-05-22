@@ -7,7 +7,7 @@ import "../../modules"
 
 ListModel {
     id: modelRaisons
-    ListElement { textRaison: "1ere raison" }
-    ListElement { textRaison: "2eme raison" }
-    ListElement { textRaison: "3eme raison" }
+    ListElement { textRaison: "Client indisponible" }
+    ListElement { textRaison: "Client injoignable" }
+    ListElement { textRaison: "Client désintéressé" }
 }

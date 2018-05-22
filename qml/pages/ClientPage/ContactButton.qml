@@ -2,31 +2,22 @@ import QtQuick 2.7
 import QtQuick.Controls 2.2
 
 Button {
-    property string srcIcon : ""
+    property string btnColor : clientPage.client_gendarme ? colorGendarmeMinor : colorSimpleClientMinor
 
     id: control
+
     font.pixelSize: Qt.application.font.pixelSize * 1.25
     font.family: "acumin-pro"
 
+    anchors.centerIn: parent
+
+    width: 0.95 * mainPage.width
+    height: (1/8) * mainPage.height
+
+
     background: Rectangle {
-
-        border.color: "#26282a"
-        border.width: 1
-        radius: 4
-
-        Image {
-            z : 3
-            anchors.centerIn: parent
-            source: srcIcon
-
-            height: parent.height
-            fillMode: Image.PreserveAspectFit
-        }
-
-
-        gradient: Gradient {
-            GradientStop { position: 0 ; color: control.pressed ? "#C6AF90" : "#EDECE0" }
-            GradientStop { position: 1 ; color: control.pressed ? "#EDECE0" : "#C6AF90" }
-        }
+        id : back
+        radius: 10
+        color : btnColor
     }
 }

@@ -11,8 +11,6 @@ RowLayout {
     Layout.fillHeight: true
     Layout.fillWidth: true
 
-    property bool squad
-    property bool satisfactionClient
 
     ColumnLayout {
         spacing: 0
@@ -48,7 +46,7 @@ RowLayout {
                 color: "transparent"
 
                 TextBox {
-                    text: "Nom Prénom"
+                    text: clientPage.client_name
                     bold : true
                     color: "white"
                     anchors.centerIn: parent
@@ -62,7 +60,7 @@ RowLayout {
             Layout.fillWidth: true
             Layout.preferredHeight: (1/2)*root.height
 
-            visible: squad ? true : false
+            visible: clientPage.squad ? true : false
 
             Rectangle {
                 Layout.preferredWidth: 0.1 * root.width
@@ -85,7 +83,7 @@ RowLayout {
                 color: "transparent"
 
                 TextBox {
-                    text: "Gendarmerie de l'Hérault"
+                    text: clientPage.squadName
                     color: "white"
                     anchors.centerIn: parent
                 }
@@ -106,7 +104,7 @@ RowLayout {
                 Image {
                     width: parent.width
                     height: parent.height
-                    source: squad ? "../../../images/icon/position_gendarme.png" : "../../../images/icon/position_blanc.png"
+                    source: clientPage.squad ? "../../../images/icon/position_gendarme.png" : "../../../images/icon/position_blanc.png"
                     fillMode: Image.PreserveAspectFit
 
                     anchors.centerIn: parent
@@ -119,7 +117,7 @@ RowLayout {
                 color: "transparent"
 
                 Text {
-                    text: "000km _ 00000 VILLE"
+                    text: "000km _ 00000 VILLE" // a modifier
                     color: "white"
                     font.family: "Californian FB"
                     anchors.left: parent.left
@@ -153,7 +151,7 @@ RowLayout {
                 Image {
                     width: parent.width
                     height: parent.height
-                    source: satisfactionClient ? "../../../images/icon/smiley.png" : "../../../images/icon/smiley_sad.png"
+                    source: clientPage.client_satisfaction ? "../../../images/icon/smiley.png" : "../../../images/icon/smiley_sad.png"
                     fillMode: Image.PreserveAspectFit
 
                     anchors.centerIn: parent

@@ -14,9 +14,17 @@ Page {
     property bool client3_visibility: false
     property bool client4_visibility: false
     property bool client5_visibility: false
-    property bool client_pm: true
-    property bool squadClient: client_pm ? true : false
-    property bool client_happy: true
+
+    /* Client datas */
+    property string client_name : ""
+    property bool client_gendarme: true
+    property bool client_satisfaction: true
+    property string client_phone : "00 00 00 00 00"
+    property string client_mobile : "06 00 00 00 00"
+    property string client_mail : "customer@mail.com"
+
+    property bool squad: client_gendarme ? true : false
+    property string squadName: "Gendarmerie de l'Hérault"
 
 
 
