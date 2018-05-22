@@ -14,15 +14,18 @@ Page {
     property bool client3_visibility: false
     property bool client4_visibility: false
     property bool client5_visibility: false
+    property bool client_pm: true
+    property bool squadClient: client_pm ? true : false
+    property bool client_happy: true
 
 
 
-    header: Label {
-        text: qsTr("Mes clients")
-        font.pixelSize: Qt.application.font.pixelSize * 2
-        font.family: "acumin-pro"
-        padding: 10
-    }
+//    header: Label {
+//        text: qsTr("Mes clients")
+//        font.pixelSize: Qt.application.font.pixelSize * 2
+//        font.family: "acumin-pro"
+//        padding: 10
+//    }
 
         Etat1 {
             id : etat1
@@ -43,12 +46,6 @@ Page {
             id : etat4
             visible: client4_visibility
         }
-
-        Etat5 {
-            id : etat5
-            visible: client5_visibility
-        }
-
 }
 
 

@@ -24,7 +24,6 @@
         <file>qml/pages/ClientPage/Etat2.qml</file>
         <file>qml/pages/ClientPage/Etat3.qml</file>
         <file>qml/pages/ClientPage/Etat4.qml</file>
-        <file>qml/pages/ClientPage/Etat5.qml</file>
         <file>qml/pages/ItineraryPage/Etat2.qml</file>
         <file>images/icon/calendar.png</file>
         <file>images/icon/clients.png</file>
@@ -42,6 +41,37 @@
         <file>images/icon/home_gris.png</file>
         <file>images/icon/itinerary_gris.png</file>
         <file>images/icon/map_gris.png</file>
+        <file>qml/modules/ErrorBox.qml</file>
+        <file>qml/modules/InputBox.qml</file>
+        <file>qml/modules/MyButton.qml</file>
+        <file>qml/modules/TextEditBox.qml</file>
+        <file>qml/modules/MyModel.qml</file>
+        <file>qml/modules/MyTable.qml</file>
+        <file>images/icon/smiley.png</file>
+        <file>qml/modules/Test.qml</file>
+        <file>images/icon/infoClient.png</file>
+        <file>qml/pages/ClientPage/TestH.qml</file>
+        <file>qml/pages/ClientPage/ContactButton.qml</file>
+        <file>images/icon/back.png</file>
+        <file>images/icon/gendflam.png</file>
+        <file>qml/modules/TextBox.qml</file>
+        <file>images/icon/gendarme_gris.png</file>
+        <file>images/icon/position_blanc.png</file>
+        <file>images/icon/smiley_blanc.png</file>
+        <file>images/icon/smiley_gris.png</file>
+        <file>images/icon/position_gendarme.png</file>
+        <file>images/icon/gendarmerie.png</file>
+        <file>images/icon/position_gendarme_gris.png</file>
+        <file>qml/pages/ClientPage/LittleHeadCustomer.qml</file>
+        <file>images/icon/position.png</file>
+        <file>qml/pages/ClientPage/HeaderCustomer.qml</file>
+        <file>qml/modules/RowTypeButton.qml</file>
+        <file>qml/modules/MyList.qml</file>
+        <file>qml/pages/ClientPage/ModelRaisons.qml</file>
+        <file>qml/pages/ClientPage/DelegateRaisons.qml</file>
+        <file>qml/pages/ClientPage/DelegateClients.qml</file>
+        <file>qml/pages/ClientPage/ModelClients.qml</file>
+        <file>images/icon/smiley_sad.png</file>
         <file>qml/modules/Logo.qml</file>
         <file>qml/modules/MyCalendar.qml</file>
         <file>qml/modules/ErrorBox.qml</file>
@@ -49,7 +79,6 @@
         <file>qml/modules/TextEditBox.qml</file>
         <file>images/eventindicator.png</file>
         <file>qml/modules/TextBox.qml</file>
-        <file>qml/modules/MyModel.qml</file>
         <file>qml/pages/CalendarPage/EventList.qml</file>
         <file>qml/pages/CalendarPage/EventModel.qml</file>
         <file>images/icon/calendar_or.png</file>
