@@ -68,7 +68,7 @@ ColumnLayout {
                     }
                     else if (page == 3)
                     {
-                        clientPage.client3_visibility = false;
+                        clientPage.client3_Client_visibility = false;
                         clientPage.client4_visibility = true;
                     }
                     else
@@ -126,6 +126,16 @@ ColumnLayout {
                     }
                 }
 
+                MouseArea {
+                    anchors.fill : parent
+                    onClicked: {
+                        if (clientPage.client_gendarme)
+                        {
+                            clientPage.client2_visibility = false
+                            clientPage.client5_visibility = true
+                        }
+                    }
+                }
             }
 
             /* Position */

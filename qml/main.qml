@@ -30,6 +30,7 @@ ApplicationWindow {
     property string colorGendarmeMinor :"#87CEFA"
     property string colorSimpleClient : "#32CD32"
     property string colorSimpleClientMinor : "#B0F2B6"
+    property string colorSquad : "#00BFFF"
 
     property int ccialPoints : 4
 

@@ -19,26 +19,26 @@ ColumnLayout {
     RowLayout {
         spacing: 0
         Layout.topMargin: 0.01 * mainPage.height
-        Layout.preferredHeight: (1/4)*parent.height
+        Layout.preferredHeight: (1/6) * parent.height
         Layout.fillHeight: true
         Layout.fillWidth: true
 
         Rectangle {
             Layout.fillHeight: true
             Layout.fillWidth: true
-            color: clientPage.client_gendarme ? colorGendarme : colorSimpleClient
+            color: colorSquad
 
-            HeaderCustomer {
-                page : 2
+            HeaderSquad {
+            page: 5
             }
         }
     }
 
 
-    /* Client's datas */
+    /* Squad's datas */
     RowLayout {
         spacing: 0
-        Layout.preferredHeight: (5/8)*parent.height
+        Layout.preferredHeight: (17/24) * parent.height
         Layout.fillHeight: true
         Layout.fillWidth: true
 
@@ -55,7 +55,7 @@ ColumnLayout {
 
     RowLayout {
         spacing: 0
-        Layout.preferredHeight: (1/8)*parent.height
+        Layout.preferredHeight: (1/8) * parent.height
         Layout.fillHeight: true
         Layout.fillWidth: true
 
@@ -71,8 +71,8 @@ ColumnLayout {
                 height: (1/10) * etat.height
 
                 onClicked : {
-                    clientPage.client2_visibility = false;
-                    clientPage.client3_Client_visibility = true;
+                    clientPage.client5_visibility = false
+                    clientPage.client3_Squad_visibility = true
                 }
             }
         }
@@ -89,8 +89,8 @@ ColumnLayout {
                 height: (1/10) * etat.height
 
                 onClicked : {
-                    //                    clientPage.client2_visibility = false;
-                    //                    clientPage.client3_Client_visibility = true;
+                    //                    clientPage.client5_visibility = false;
+                    //                    clientPage.client3_Squad_visibility = true;
                 }
             }
         }

@@ -12,47 +12,30 @@ ColumnLayout {
     anchors.fill: parent
     Layout.fillHeight: true
     Layout.fillWidth: true
+
     spacing: 0
 
-    /* Header */
 
+    /* Header */
     RowLayout {
         spacing: 0
         Layout.topMargin: 0.01 * mainPage.height
-        Layout.preferredHeight: (1/4)*parent.height
+        Layout.preferredHeight: (1/6)*parent.height
         Layout.fillHeight: true
         Layout.fillWidth: true
 
         Rectangle {
             Layout.fillHeight: true
             Layout.fillWidth: true
-            color: clientPage.client_gendarme ? colorGendarme : colorSimpleClient
+            color: colorSquad
 
-            HeaderCustomer {
-                page : 2
+            HeaderSquad {
+                page : 0
             }
         }
     }
 
-
-    /* Client's datas */
-    RowLayout {
-        spacing: 0
-        Layout.preferredHeight: (5/8)*parent.height
-        Layout.fillHeight: true
-        Layout.fillWidth: true
-
-        Rectangle {
-            Layout.fillHeight: true
-            Layout.fillWidth: true
-            //color: "lightGrey"
-
-            TextBox {
-                text: "details"
-            }
-        }
-    }
-
+    /* Label */
     RowLayout {
         spacing: 0
         Layout.preferredHeight: (1/8)*parent.height
@@ -62,35 +45,57 @@ ColumnLayout {
         Rectangle {
             Layout.fillHeight: true
             Layout.fillWidth: true
-            //color: "lightGrey"
 
-            MyButton {
-                text : "Contacter"
-                anchors.centerIn: parent
-                width: (1/3) * etat.width
-                height: (1/10) * etat.height
-
-                onClicked : {
-                    clientPage.client2_visibility = false;
-                    clientPage.client3_Client_visibility = true;
-                }
+            TextBox {
+                text: "Pour quelle raison ne souhaitez-vous pas contacter cette gendarmerie ?"
+                font.pixelSize: Qt.application.font.pixelSize * 1.3
+                horizontalAlignment: Text.left
             }
         }
+    }
+
+    /* List of Reasons */
+    RowLayout {
+        spacing: 0
+        Layout.preferredHeight: (7/12)*parent.height
+        Layout.fillHeight: true
+        Layout.fillWidth: true
 
         Rectangle {
             Layout.fillHeight: true
             Layout.fillWidth: true
-            //color: "lightGrey"
+
+            MyList {
+                id: listRaisons
+                model : DelegateRaisons {
+                    view: listRaisons
+                }
+            }
+        }
+    }
+
+
+    /* Button */
+    RowLayout {
+        spacing: 0
+        Layout.preferredHeight: (1/8)*parent.height
+        Layout.fillHeight: true
+        Layout.fillWidth: true
+
+        Rectangle {
+            Layout.fillHeight: true
+            Layout.fillWidth: true
 
             MyButton {
-                text : "Visiter"
                 anchors.centerIn: parent
                 width: (1/3) * etat.width
                 height: (1/10) * etat.height
+                text: "Enregistrer"
 
-                onClicked : {
-                    //                    clientPage.client2_visibility = false;
-                    //                    clientPage.client3_Client_visibility = true;
+                onClicked: {
+                    console.log("Enregistrer")
+                    clientPage.client4_Squad_visibility = false;
+                    clientPage.client5_visibility = true;
                 }
             }
         }
@@ -98,4 +103,3 @@ ColumnLayout {
 
 
 }
-
