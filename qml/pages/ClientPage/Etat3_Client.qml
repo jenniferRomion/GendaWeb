@@ -121,7 +121,7 @@ ColumnLayout {
 
                 onClicked : {
                     console.log("Veuillez fixer votre rdv")
-                    //                    clientPage.client3_visibility = false;
+                    //                    clientPage.client3_Client_visibility = false;
                     //                    clientPage.client2_visibility = true;
                 }
             }
@@ -140,7 +140,7 @@ ColumnLayout {
 
                 onClicked : {
                     console.log("Nous préparons votre itinéraire")
-                    //                    clientPage.client3_visibility = false;
+                    //                    clientPage.client3_Client_visibility = false;
                     //                    clientPage.client2_visibility = true;
                 }
             }

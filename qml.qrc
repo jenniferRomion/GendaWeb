@@ -22,7 +22,6 @@
         <file>qml/pages/ConfigurationPage.qml</file>
         <file>qml/pages/ItineraryPage.qml</file>
         <file>qml/pages/ClientPage/Etat2.qml</file>
-        <file>qml/pages/ClientPage/Etat3.qml</file>
         <file>qml/pages/ClientPage/Etat4.qml</file>
         <file>qml/pages/ItineraryPage/Etat2.qml</file>
         <file>images/icon/calendar.png</file>
@@ -168,5 +167,15 @@
         <file>images/icon/navigation/arrival.png</file>
         <file>images/icon/navigation/arrivalBis.png</file>
         <file>images/icon/navigation/depart.png</file>
+        <file>qml/pages/MapPage/PopupInfo.qml</file>
+        <file>qml/pages/MapPage/PopupNotification.qml</file>
+        <file>qml/pages/MapPage/PopupRejection.qml</file>
+        <file>qml/pages/MapPage/DelegateRaisons.qml</file>
+        <file>qml/pages/MapPage/RaisonsModel.qml</file>
+        <file>qml/pages/ClientPage/Etat5.qml</file>
+        <file>qml/pages/ClientPage/HeaderSquad.qml</file>
+        <file>qml/pages/ClientPage/Etat3_Squad.qml</file>
+        <file>qml/pages/ClientPage/Etat3_Client.qml</file>
+        <file>qml/pages/ClientPage/Etat4_Squad.qml</file>
     </qresource>
 </RCC>

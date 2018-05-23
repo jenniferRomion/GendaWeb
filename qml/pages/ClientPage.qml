@@ -11,8 +11,11 @@ Page {
 
     property bool client1_visibility: true
     property bool client2_visibility: false
-    property bool client3_visibility: false
+    property bool client3_Client_visibility: false
+    property bool client3_Squad_visibility: false
     property bool client4_visibility: false
+    property bool client4_Client_visibility: false
+    property bool client4_Squad_visibility: false
     property bool client5_visibility: false
 
     /* Client datas */
@@ -45,14 +48,29 @@ Page {
             visible: client2_visibility
         }
 
-        Etat3 {
-            id : etat3
-            visible: client3_visibility
+        Etat3_Client {
+            id : etat3_client
+            visible: client3_Client_visibility
+        }
+
+        Etat3_Squad {
+            id : etat3_squad
+            visible: client3_Squad_visibility
         }
 
         Etat4 {
-            id : etat4
-            visible: client4_visibility
+            id : etat4_client
+            visible: client4_Client_visibility
+        }
+
+        Etat4_Squad {
+            id : etat4_squad
+            visible: client4_Squad_visibility
+        }
+
+        Etat5 {
+            id : etat5
+            visible: client5_visibility
         }
 }
 

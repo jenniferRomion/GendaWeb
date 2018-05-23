@@ -12,21 +12,43 @@ ColumnLayout {
 
     id : etat
 
-       anchors.fill: parent
-       Layout.fillHeight: true
-       Layout.fillWidth: true
-       spacing: 0
+    anchors.fill: parent
+    Layout.fillHeight: true
+    Layout.fillWidth: true
+    spacing: 0
 
 
-       Rectangle {
+    RowLayout {
+        spacing: 0
+        Layout.preferredHeight: parent.height
+        Layout.fillHeight: true
+        Layout.fillWidth: true
 
-           Layout.fillHeight: true
-           Layout.fillWidth: true
-           //color: "red"
+        Rectangle {
+            Layout.fillHeight: true
+            Layout.fillWidth: true
+            //color: red
 
-           MyMap{
-               id: myMap
+            MyMap {
 
-           }
+                MyButton {
+                    text : "test"
+                    width: (1/3) * etat.width
+                    height: (1/10) * etat.height
+                    anchors.bottom: parent.bottom
+                    anchors.horizontalCenter: parent.horizontalCenter
+
+                    onClicked : {
+                        notification.open();
+                    }
+
+                }
+            }
+        }
     }
+
+
+    PopupInfo {id : popup}
+    PopupNotification {id : notification}
+    PopupRejection { id : raisons}
 }

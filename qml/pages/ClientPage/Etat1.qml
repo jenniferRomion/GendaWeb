@@ -84,13 +84,13 @@ ColumnLayout {
 //                onCurrentIndexChanged: console.log(idtemp.model.get(listClients.currentIndex).name)
 
                 function f(){
-                    clientPage.client_name = idtemp.model.get(listClients.currentIndex).name;
-                    clientPage.client_gendarme = idtemp.model.get(listClients.currentIndex).gendarme;
-                    clientPage.client_satisfaction = idtemp.model.get(listClients.currentIndex).satisfaction;
+                    clientPage.client_name = idModel.model.get(listClients.currentIndex).name;
+                    clientPage.client_gendarme = idModel.model.get(listClients.currentIndex).gendarme;
+                    clientPage.client_satisfaction = idModel.model.get(listClients.currentIndex).satisfaction;
                 }
 
                 model : DelegateClients {
-                    id : idtemp
+                    id : idModel
                     view: listClients
                 }
             }
