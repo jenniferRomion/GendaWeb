@@ -151,5 +151,22 @@
         <file>images/icon/smiley_green.png</file>
         <file>images/icon/gendarme.png</file>
         <file>images/icon/smiley_red.png</file>
+        <file>qml/pages/ItineraryPage/ListNavigation.qml</file>
+        <file>qml/pages/ItineraryPage/RouteListHeader.qml</file>
+        <file>qml/pages/ItineraryPage/DelegateRouteList.qml</file>
+        <file>images/icon/direction.png</file>
+        <file>images/icon/time.png</file>
+        <file>images/icon/distance.png</file>
+        <file>qml/pages/ItineraryPage/ItinenaryDetails.qml</file>
+        <file>images/icon/navigation/leftRoundabout.png</file>
+        <file>images/icon/navigation/leftTurn.png</file>
+        <file>images/icon/navigation/rightRoundabout.png</file>
+        <file>images/icon/navigation/rightTurn.png</file>
+        <file>qml/pages/ItineraryPage/DelegateNavigation.qml</file>
+        <file>qml/pages/ItineraryPage/ModelNavigation.qml</file>
+        <file>images/icon/navigation/keepStraight.png</file>
+        <file>images/icon/navigation/arrival.png</file>
+        <file>images/icon/navigation/arrivalBis.png</file>
+        <file>images/icon/navigation/depart.png</file>
     </qresource>
 </RCC>

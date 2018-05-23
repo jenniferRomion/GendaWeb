@@ -43,8 +43,17 @@ ColumnLayout {
 
             MyList{
                 id: listItineraries
+
+                function f(){
+                    itineraryPage.roadSelected = idItenerary.model.get(listItineraries.currentIndex).road;
+                    itineraryPage.timeItinerary = idItenerary.model.get(listItineraries.currentIndex).time;
+                    itineraryPage.numberClients = idItenerary.model.get(listItineraries.currentIndex).clients;
+                    itineraryPage.distanceItineray = idItenerary.model.get(listItineraries.currentIndex).distance;
+                }
+
                 model : DelegateItineraries {
-                    view: listItineraries
+                    id: idItenerary
+                    view: listItineraries                   
                 }
             }
         }
@@ -61,19 +70,18 @@ ColumnLayout {
             //color: "lightGrey"
 
             MyButton {
-                text : "temp" // réinitialiser ?
+                text : "Sélectionner" // réinitialiser ?
                 anchors.centerIn: parent
-                width:  etat.width
+                width: (1/3) * etat.width
                 height: (1/8) * etat.height
 
                 onClicked : {
-                    itineraryPage.itinerary1_visibility = false
-                    itineraryPage.itinerary2_visibility = true
+                    listItineraries.f();
+                    itineraryPage.itinerary3_visibility = false
+                    itineraryPage.itinerary4_visibility = true
                 }
             }
         }
-
-
 
 
     }
