@@ -22,12 +22,12 @@ Page {
 
     }
 
-    footer: Label {
+//    footer: Label {
 
-        text: "lat_lng"
-        font.pixelSize: Qt.application.font.pixelSize * 1.25
-        font.family: "Calibri"
-    }
+//        text: "lat_lng"
+//        font.pixelSize: Qt.application.font.pixelSize * 1.25
+//        font.family: "Calibri"
+//    }
 
     PositionSource{
         id: gpsPosition

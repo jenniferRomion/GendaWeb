@@ -149,5 +149,10 @@
         <file>images/icon/smiley_green.png</file>
         <file>images/icon/gendarme.png</file>
         <file>images/icon/smiley_red.png</file>
+        <file>qml/pages/MapPage/PopupInfo.qml</file>
+        <file>qml/pages/MapPage/PopupNotification.qml</file>
+        <file>qml/pages/MapPage/PopupRejection.qml</file>
+        <file>qml/pages/MapPage/DelegateRaisons.qml</file>
+        <file>qml/pages/MapPage/RaisonsModel.qml</file>
     </qresource>
 </RCC>
