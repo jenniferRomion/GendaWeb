@@ -7,7 +7,7 @@ import "../modules"
 import "ConfigurationPage"
 
 Page {
-    id : homePage
+    id : configPage
 
     property bool config_visibility1: true
     property bool config_visibility2: false
@@ -69,7 +69,27 @@ Page {
         visible: config_visibility3_ring
     }
 
+    footer: Rectangle {
+        width: configPage.width
+        height: (1/15) * configPage.height
+        color: colorMinor
 
+        TextBox {
+            id: rights
+            text: "À propos"
+            bold: true
+            font.pixelSize: Qt.application.font.pixelSize * 1.25
 
+            MouseArea {
+                anchors.fill: parent
+                onClicked: {
+                    popup.open()
+                }
+            }
+        }
 
+    }
+    PopupCopyrights {
+        id: popup
+    }
 }
