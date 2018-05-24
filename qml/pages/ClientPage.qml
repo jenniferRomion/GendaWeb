@@ -13,7 +13,7 @@ Page {
     property bool client2_visibility: false
     property bool client3_Client_visibility: false
     property bool client3_Squad_visibility: false
-    property bool client4_visibility: false
+    //property bool client4_visibility: false
     property bool client4_Client_visibility: false
     property bool client4_Squad_visibility: false
     property bool client5_visibility: false
@@ -58,7 +58,7 @@ Page {
             visible: client3_Squad_visibility
         }
 
-        Etat4 {
+        Etat4_Client {
             id : etat4_client
             visible: client4_Client_visibility
         }

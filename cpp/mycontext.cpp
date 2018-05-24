@@ -1,5 +1,8 @@
 #include "mycontext.h"
 #include <QDebug>
+#include <iostream>
+
+using namespace std;
 
 /////////////////////////////////////////////////////////////////////////////
 /// Initialisation
@@ -9,7 +12,6 @@ MyContext::MyContext(QObject *parent) : QObject(parent), m_myContext(nullptr)
 {
     setErrorMessage("");
     setWellDoneMessage("");
-
 }
 
 void MyContext::initMyContext(/*QQmlApplicationEngine &engine,*/ QQmlContext *myContext)

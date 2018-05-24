@@ -86,7 +86,7 @@ ColumnLayout {
             Layout.leftMargin: 0.01 * mainPage.width
             Layout.rightMargin: 0.01 * mainPage.width
             radius: 4
-            color: "royalBlue" // a modifier selon type de customer
+            color:calendarPage.clientStatus ? colorGendarme : colorSimpleClient
 
             TextBox {
                 id : customerLabel
@@ -94,7 +94,7 @@ ColumnLayout {
                 bold : true
                 color : "white"
 
-                text: "Weber" + " " + "Quentin" + "\n"
+                text: calendarPage.clientName + "\n"
                       + "00.00.00.00.00" + "\n"
                       + "13 rue de l'argonne 45 000 ORLEANS"
 
@@ -126,7 +126,7 @@ ColumnLayout {
                 id : rdvType
                 bold : true
                 underline : true
-                text: "R1 - Etude à présenter"
+                text: calendarPage.clientRdv
                 //elweb.int_rdvtype.libelle + " _ " + elweb.int_etatrdv.rdv_libelle
             }
         }

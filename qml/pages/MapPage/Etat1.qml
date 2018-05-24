@@ -3,7 +3,10 @@ import QtQuick.Controls 2.2
 import QtQuick.Layouts 1.1
 import QtQuick.Controls.Styles 1.2
 
-import QtWebView 1.1
+import QtLocation 5.6
+import QtPositioning 5.5
+
+//import QtWebView 1.1
 
 import "../../modules"
 import "../../../images"
@@ -29,7 +32,15 @@ ColumnLayout {
             Layout.fillWidth: true
             //color: red
 
-            MyMap {
+
+            NewMap {
+                id : map
+                anchors.fill : parent
+
+                markerDatas: [{text : "tour Eiffel", location : QtPositioning.coordinate(48.8584, 2.2945)},
+                    {text : "Notre Dame", location : QtPositioning.coordinate(48.853, 2.35)},
+                    {text : "arc de triomphe", location : QtPositioning.coordinate(48.8738, 2.295)}]
+
 
                 MyButton {
                     text : "test"
@@ -41,14 +52,18 @@ ColumnLayout {
                     onClicked : {
                         notification.open();
                     }
-
                 }
+                onMarkerClicked: popup.open()
             }
+
         }
     }
-
 
     PopupInfo {id : popup}
     PopupNotification {id : notification}
     PopupRejection { id : raisons}
+
+
+
+
 }

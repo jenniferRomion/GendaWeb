@@ -94,7 +94,7 @@ ColumnLayout {
 
                 onClicked: {
                     console.log("Enregistrer")
-                    clientPage.client4_visibility = false;
+                    clientPage.client4_Client_visibility = false;
                     clientPage.client2_visibility = true;
                 }
             }

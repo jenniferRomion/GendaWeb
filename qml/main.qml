@@ -78,24 +78,24 @@ ApplicationWindow {
         currentIndex: tabBar.currentIndex
         interactive: interactivity
 
-        //        onCurrentIndexChanged: {
-        //            currentCode += currentIndex
-        //            if( currentCode.length > 5 )
-        //                currentCode = currentCode.substr(1)
+//                onCurrentIndexChanged: {
+//                    currentCode += currentIndex
+//                    if( currentCode.length > 5 )
+//                        currentCode = currentCode.substr(1)
 
-        //            if( magicCode == currentCode)
-        //            {
-        //                console.log("bingo");
-        //                debugVisibility === false ? debugVisibility = true : debugVisibility = false ;
-        //            }
+//                    if( magicCode == currentCode)
+//                    {
+//                        console.log("bingo");
+//                        debugVisibility === false ? debugVisibility = true : debugVisibility = false ;
+//                    }
 
-        //            if (currentIndex == 2 || (currentIndex == 4 && !debugVisibility) ) { //a modifier si bug d'affichage
-        //                interactivity = false
-        //            }
-        //            else {
-        //                interactivity = true
-        //            }
-        //        }
+//                    if (currentIndex == 3) { //a modifier si bug d'affichage
+//                        interactivity = false
+//                    }
+//                    else {
+//                        interactivity = true
+//                    }
+//                }
 
         /* Item of the SwipeView */
 
