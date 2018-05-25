@@ -118,6 +118,7 @@ Popup {
                         onClicked: {
                             console.log("Client : fiche ")
                             popup.close()
+                            clientPage.client1_visibility = false
                             clientPage.client2_visibility = true
                         }
                     }
