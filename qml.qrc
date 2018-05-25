@@ -162,5 +162,6 @@
         <file>images/map_icons/marker.png</file>
         <file>qml/pages/MapPage/NewMap.qml</file>
         <file>qml/pages/MapPage/Marker.qml</file>
+        <file>images/icon/chevron.png</file>
     </qresource>
 </RCC>

@@ -6,6 +6,10 @@ import QtPositioning 5.5
 
 MapQuickItem {
     property string value
+    property string newName
+    property bool newSatisfaction
+    property bool newGendarme
+
     signal activated
 
     id: marker

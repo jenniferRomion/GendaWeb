@@ -18,7 +18,7 @@ Page {
 
     Etat1 {
         id : etat1
-        visible: true
+        visible: map1_visibility
     }
 
 }

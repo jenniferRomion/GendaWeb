@@ -9,9 +9,7 @@ Item  {
     signal send
 
     property var markerDatas : []
-
     property var areaDatas : []
-
 
     Plugin {
         id: mapPlugin
@@ -52,9 +50,18 @@ Item  {
 
             if (markerDatas.length > 0) {
                 for (var j in markerDatas) {
-                    map.marker = Qt.createQmlObject('import QtLocation 5.3; Marker {onActivated : { console.log(coordinate) ; page.markerClicked()} }', page)
+                    map.marker = Qt.createQmlObject('import QtLocation 5.3; Marker {onActivated :
+                                                    { console.log(coordinate) ;
+                                                      page.markerClicked() ;
+                                                      clientPage.client_name = newName  ;
+                                                      clientPage.client_satisfaction = newSatisfaction ;
+                                                      clientPage.client_gendarme = newGendarme }
+                                                     }', page)
                     map.marker.coordinate = markerDatas[j].location
-                    map.marker.value = markerDatas[j].text
+                    map.marker.newName = markerDatas[j].name
+                    map.marker.newSatisfaction = markerDatas[j].satisfaction
+                    map.marker.newGendarme = markerDatas[j].gendarme
+
                     map.addMapItem(map.marker)
                 }
             }
