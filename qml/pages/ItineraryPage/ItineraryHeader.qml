@@ -84,7 +84,27 @@ ColumnLayout {
                 horizontalAlignment: Text.AlignLeft
             }
         }
-    }
 
+        Rectangle {
+            Layout.fillHeight: true
+            Layout.fillWidth: true
+            Layout.preferredWidth: 0.20 * etat.width
+            color: colorMinor
+
+            HeaderButtonReturn {
+                onClicked: {
+                    if(itineraryPage.itinerary3_visibility ){
+                        itineraryPage.itinerary3_visibility = false
+                        itineraryPage.itinerary2_visibility = true
+                    }
+
+                    else if(itineraryPage.itinerary4_visibility ){
+                        itineraryPage.itinerary4_visibility = false
+                        itineraryPage.itinerary3_visibility = true
+                    }
+                }
+            }
+        }
+    }
 
 }

@@ -70,9 +70,10 @@ DelegateModel {
                         color: "transparent"
 
                         TextBox {
+                            id: itineraryChoice
                             text : "Via " + road
                             horizontalAlignment: Text.left
-                            bold: true
+                            bold: true                            
                         }
                     }
 

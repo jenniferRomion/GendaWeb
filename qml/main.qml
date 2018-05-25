@@ -48,7 +48,6 @@ ApplicationWindow {
     property string cityTo: ""
     property string countryTo: "France"
 
-
     visible: true
 
     width: 384

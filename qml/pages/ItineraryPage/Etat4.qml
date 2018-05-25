@@ -13,36 +13,62 @@ ColumnLayout {
     Layout.fillHeight: true
     Layout.fillWidth: true
 
-    spacing: 0
+    spacing: 0.02 * mainPage.height
 
     RowLayout {
         spacing: 0
-        Layout.preferredHeight: (1/2)*parent.height
-        Layout.fillHeight: true
+        Layout.preferredHeight: (1/8)*etat.height
         Layout.fillWidth: true
+        z: 3
 
         Rectangle {
             Layout.fillHeight: true
             Layout.fillWidth: true
-            color: "white"
+            color: colorMinor
 
-
+            ItineraryHeader {}
         }
     }
 
+    RowLayout {
+        spacing: 0
+        Layout.preferredHeight: (1/8)*etat.height
+        Layout.fillHeight: true
+        Layout.fillWidth: true
+        z: 3
+
+        Rectangle {
+            id: details
+            Layout.fillHeight: true
+            Layout.fillWidth: true
+
+            ItinenaryDetails {}
+        }
+    }
 
     RowLayout {
         spacing: 0
-        Layout.preferredHeight: (1/2)*parent.height
-        Layout.fillHeight: true
+        Layout.preferredHeight: (3/4)*etat.height
         Layout.fillWidth: true
+        z: 0
 
         Rectangle {
             Layout.fillHeight: true
             Layout.fillWidth: true
-            color: "lightGrey"
 
+
+            MyList{
+                id: listNavigation
+                withHighlight: false
+
+                model : DelegateNavigation {
+                    id: idNavigation
+                    view: listNavigation
+                }
+            }
         }
     }
+
+
 
 }

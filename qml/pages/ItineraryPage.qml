@@ -15,33 +15,39 @@ Page {
     property bool itinerary4_visibility: false
 
 
+    /*Datas Itinerary*/
+    property string roadSelected: ""
+    property int timeItinerary: 0
+    property int numberClients: 0
+    property double distanceItineray: 0.0
 
-//    header: Label {
-//        text: qsTr("Itinéraire")
-//        font.pixelSize: Qt.application.font.pixelSize * 2
-//        font.family: "acumin-pro"
-//        padding: 10
-//    }
 
-        Etat1 {
-            id : etat1
-            visible: itinerary1_visibility
-        }
+    //    header: Label {
+    //        text: qsTr("Itinéraire")
+    //        font.pixelSize: Qt.application.font.pixelSize * 2
+    //        font.family: "acumin-pro"
+    //        padding: 10
+    //    }
 
-        Etat2 {
-            id : etat2
-            visible: itinerary2_visibility
-        }
+    Etat1 {
+        id : etat1
+        visible: itinerary1_visibility
+    }
 
-        Etat3 {
-            id : etat3
-            visible: itinerary3_visibility
-        }
+    Etat2 {
+        id : etat2
+        visible: itinerary2_visibility
+    }
 
-        Etat4 {
-            id : etat4
-            visible: itinerary4_visibility
-        }
+    Etat3 {
+        id : etat3
+        visible: itinerary3_visibility
+    }
+
+    Etat4 {
+        id : etat4
+        visible: itinerary4_visibility
+    }
 
 }
 
