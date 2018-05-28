@@ -2,7 +2,7 @@ TEMPLATE = app
 TARGET = GendaWeb
 
 QT += qml quick webview sql network\
-    positioning core widgets
+    positioning core widgets location
 
 SOURCES += cpp/main.cpp \
     cpp/mycontext.cpp \

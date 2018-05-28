@@ -9,7 +9,6 @@
         <file>qml/pages/HomePage/Etat1.qml</file>
         <file>qml/pages/HomePage/Etat2.qml</file>
         <file>qml/pages/MapPage/Etat1.qml</file>
-        <file>qml/modules/MyMap.qml</file>
         <file>qml/pages/HomePage/Etat3.qml</file>
         <file>qml/javascript/httpRequest.js</file>
         <file>qml/pages/MyDebuggingPage.qml</file>
@@ -22,7 +21,6 @@
         <file>qml/pages/ConfigurationPage.qml</file>
         <file>qml/pages/ItineraryPage.qml</file>
         <file>qml/pages/ClientPage/Etat2.qml</file>
-        <file>qml/pages/ClientPage/Etat4.qml</file>
         <file>qml/pages/ItineraryPage/Etat2.qml</file>
         <file>images/icon/calendar.png</file>
         <file>images/icon/clients.png</file>
@@ -182,5 +180,10 @@
         <file>qml/pages/ConfigurationPage/BackgroundCopyrights.qml</file>
         <file>images/icon/afpa.png</file>
         <file>images/icon/Qt_Creator.png</file>
+        <file>qml/pages/ClientPage/Etat4_Client.qml</file>
+        <file>images/map_icons/marker.png</file>
+        <file>qml/pages/MapPage/NewMap.qml</file>
+        <file>qml/pages/MapPage/Marker.qml</file>
+        <file>images/icon/chevron.png</file>
     </qresource>
 </RCC>

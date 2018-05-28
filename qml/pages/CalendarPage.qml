@@ -14,6 +14,7 @@ Page {
     property string clientName :""
     property string clientRdv : ""
     property string rdvTime : "00:00"
+    property bool clientStatus
     property var currentDate : new Date()
 
 

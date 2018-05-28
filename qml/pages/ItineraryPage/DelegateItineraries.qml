@@ -66,7 +66,7 @@ DelegateModel {
                     Rectangle {
                         Layout.fillHeight: true
                         Layout.preferredWidth: 0.3 * root.width
-                        anchors.left: carIcon.right
+                        //anchors.left: carIcon.right
                         color: "transparent"
 
                         TextBox {
@@ -116,7 +116,7 @@ DelegateModel {
                         Layout.fillHeight: true
                         Layout.fillWidth: true
                         Layout.preferredWidth: 0.3 * root.width
-                        anchors.right: parent.right
+                        //anchors.right: parent.right
                         color: "transparent"
 
                         TextBox {

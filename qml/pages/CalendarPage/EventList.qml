@@ -6,14 +6,14 @@ Rectangle {
 
     property bool active : calendarPage.calendar1_visibility
 
-    ListModel {
-        id: idModel
-        ListElement {
-            time: "00:00"
-            name : ""
-            rdv : ""
-        }
-    }
+//    ListModel {
+//        id: idModel
+//        ListElement {
+//            time: "00:00"
+//            name : ""
+//            rdv : ""
+//        }
+//    }
 
     Component {
         id: idDelegate
@@ -56,15 +56,16 @@ Rectangle {
         anchors { fill: parent; margins: 2 }
 
         //model: idModel
-        model : EventModel {}
+        model : EventModel { id: idModel}
         delegate: idDelegate
 
         highlight: Rectangle { color: colorMajor ; radius : 4 }
         focus: true
         onCurrentItemChanged: {
-                        clientName = idModel.get(idListView.currentIndex).name;
-                        clientRdv = idModel.get(idListView.currentIndex).type;
-                        rdvTime = idModel.get(idListView.currentIndex).hours;
+                        clientName = idModel.get(idListView.currentIndex).name
+                        clientRdv = idModel.get(idListView.currentIndex).rdv
+                        rdvTime = idModel.get(idListView.currentIndex).time
+                        clientStatus = idModel.get(idListView.currentIndex).gendarme
             //passer l'Id prospect + prosp-numfiche
         }
 

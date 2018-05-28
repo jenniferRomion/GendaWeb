@@ -14,13 +14,13 @@ class MyContext : public QObject
 {
     Q_OBJECT
 
-/* message manager */
+    /* message manager */
     Q_PROPERTY(QString errorMessage READ errorMessage WRITE setErrorMessage NOTIFY errorMessageChanged) //for debugPage
     Q_PROPERTY(QString wellDoneMessage READ wellDoneMessage WRITE setWellDoneMessage NOTIFY wellDoneMessageChanged) //for debugPage
 
 
 
-/* variables */
+    /* variables */
     QQmlContext* m_myContext;
 
     QString m_errorMessage;
@@ -35,11 +35,8 @@ public:
     void loadMyContext();
 
 
-
-
-
-/* Get & Set functions of Q_PROPERTIES */
-/* *********************************** */
+    /* Get & Set functions of Q_PROPERTIES */
+    /* *********************************** */
 
 
     QString errorMessage() const

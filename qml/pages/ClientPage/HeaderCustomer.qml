@@ -69,7 +69,7 @@ ColumnLayout {
                     else if (page == 3)
                     {
                         clientPage.client3_Client_visibility = false;
-                        clientPage.client4_visibility = true;
+                        clientPage.client4_Client_visibility = true;
                     }
                     else
                         console.log("invalid command")
@@ -127,7 +127,9 @@ ColumnLayout {
                 }
 
                 MouseArea {
-                    anchors.fill : parent
+                    height: parent.height
+                    width: parent.width
+
                     onClicked: {
                         if (clientPage.client_gendarme)
                         {
