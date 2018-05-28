@@ -10,7 +10,7 @@ ListView {
 
     anchors { fill: parent; margins: 2 }
 
-    highlight: Rectangle { color: withHighlight ? colorMajor : "transparent" ; radius : 4 }
+    highlight: Rectangle { color: withHighlight ? colorMajor : "transparent" ; radius : 32 }///AJOUT
     focus: true
     spacing: 4
 }

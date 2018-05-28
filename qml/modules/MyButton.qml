@@ -12,7 +12,7 @@ Button {
 
         border.color: "#26282a"
         border.width: 1
-        radius: 4
+        radius: 32 ///AJOUT
 
         Image {
             z : 3

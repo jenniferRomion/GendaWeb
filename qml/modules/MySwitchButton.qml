@@ -16,11 +16,13 @@ Switch {
         checkedValue === true ? checkedValue = false : checkedValue = true
     }
 
+
+
     style: SwitchStyle {
         groove: Rectangle {
             implicitWidth: switchWidth
             implicitHeight: switchHeight
-            radius: 9
+            radius: 2///AJOUT
             border.color: control.activeFocus ? "darkblue" : "gray"
             border.width: 1
             color : checkedValue === true ? "red" : "green"

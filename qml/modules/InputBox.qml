@@ -10,6 +10,7 @@ TextField {
     horizontalAlignment: TextInput.AlignHCenter
     verticalAlignment: TextInput.AlignVCenter
 
+
     wrapMode: TextInput.Wrap
     selectByMouse: true
 
