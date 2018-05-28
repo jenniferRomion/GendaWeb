@@ -36,6 +36,22 @@ Item  {
         center: QtPositioning.coordinate(48.8584, 2.2945) // Tour Eiffel
         zoomLevel: 10
 
+        MapQuickItem {
+            id: carMarker
+
+            anchorPoint.x: image.width/4
+            anchorPoint.y: image.height
+            z: 3
+
+            coordinate: QtPositioning.coordinate(positionSource.position)
+
+            sourceItem: Image {
+                id: image
+                source: "../../../images/map_icons/car_pin.png"
+            }
+        }
+
+
         Component.onCompleted : {
             if (areaDatas.length > 0) {
                 for (var i in areaDatas) {

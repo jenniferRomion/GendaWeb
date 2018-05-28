@@ -12,7 +12,7 @@ Button {
 
         border.color: "#26282a"
         border.width: 1
-        radius: 4
+        radius: control.height / 2.5
 
         Image {
             z : 3
@@ -25,8 +25,6 @@ Button {
 
 
         gradient: Gradient {
-            GradientStop { position: 0 ; color: control.pressed ? "#C6AF90" : "#EDECE0" }
-            GradientStop { position: 1 ; color: control.pressed ? "#EDECE0" : "#C6AF90" }
             GradientStop { position: 0 ; color: control.pressed ? colorMajor : colorMinor }
             GradientStop { position: 1 ; color: control.pressed ? colorMinor : colorMajor }
         }

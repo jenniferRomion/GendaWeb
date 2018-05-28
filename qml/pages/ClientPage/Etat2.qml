@@ -48,6 +48,7 @@ ColumnLayout {
             //color: "lightGrey"
 
             TextBox {
+                width: 0.9 * parent.width
                 text: "details"
             }
         }

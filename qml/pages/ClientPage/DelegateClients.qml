@@ -16,7 +16,6 @@ DelegateModel {
 
         Item {
             width: parent.width
-            //height: row.implicitHeight + 0.01 * mainPage.height
             height: 1/16 * mainPage.height
 
             Row {
@@ -38,14 +37,16 @@ DelegateModel {
                     font.family: "acumin-pro"
                     font.pixelSize: Qt.application.font.pixelSize * 1.25
                     anchors.verticalCenter: parent.verticalCenter
+                    leftPadding: 0.05 * parent.width
                 }
 
-                Image {
-                    source: satisfaction ? "../../../images/icon/smiley_green.png" : "../../../images/icon/smiley_red.png"
-                    fillMode: Image.PreserveAspectFit
-                    height: parent.height
-                    width: 0.1 * parent.width
+                RoundIcon {
+                    anchors.verticalCenter: parent.verticalCenter
+                    iSize: 0.1 * parent.width
+                    iImage: satisfaction ? "../../../images/icon/smiley.png" : "../../../images/icon/smiley_sad.png"
+                    icolor: satisfaction ? "green" : "red"
                 }
+
             }
 
             MouseArea {

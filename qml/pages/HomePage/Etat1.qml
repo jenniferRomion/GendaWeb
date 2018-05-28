@@ -4,6 +4,7 @@ import QtQuick.Layouts 1.1
 import QtQuick.Controls.Styles 1.2
 
 import "../../modules"
+import "../../javascript/httpRequest.js" as HttpScript
 
 ColumnLayout {
 
@@ -99,8 +100,16 @@ ColumnLayout {
 
                 onClicked: {
                     console.log("connexion")
-                    homePage.home1_visibility = false
-                    homePage.home2_visibility = true
+
+                    var uri = "http://localhost:55281/Account/LoginAppMobile";
+                    var datas = {
+                        Username : username.text,
+                        Password : password.text }
+
+                    HttpScript.httpRequestPost(uri, datas)
+
+                    //                    homePage.home1_visibility = false
+                    //                    homePage.home2_visibility = true
                 }
             }
         }

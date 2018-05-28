@@ -12,6 +12,7 @@ Page {
     property bool home1_visibility: true
     property bool home2_visibility: false
     property bool home3_visibility: false
+    property bool home_failed : false
 
 
 
@@ -35,6 +36,11 @@ Page {
     Etat3 {
         id : etat3
         visible: home3_visibility
+    }
+
+    Failed {
+        id: failed
+        visible: home_failed
     }
 
 }

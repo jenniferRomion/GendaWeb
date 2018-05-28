@@ -8,19 +8,22 @@ function httpRequestPost(uri, datas) {
     req.onreadystatechange = function() {
 
         if (req.readyState === XMLHttpRequest.DONE && req.status == 200) {
-            console.log("#" + req.responseText);
+            console.log("#" + JSON.parse(req.responseText));
 
-            var result = JSON.parse(req.responseText);
-            console.log("++" + JSON.stringify(result.user.id));
+//            var result = JSON.parse(req.responseText);
+//            console.log("++" + JSON.stringify(result.user.id));
 
-            MyContext.saveUser(JSON.stringify(result.user.id), JSON.stringify(result.user.username), mdp.text, JSON.stringify(result.user.mail))
+//            MyContext.saveUser(JSON.stringify(result.user.id), JSON.stringify(result.user.username), mdp.text, JSON.stringify(result.user.mail))
 
-            home1_visibilite = false;
-            home2_visibilite = true;
+            home1_visibility = false;
+            home2_visibility = true;
 
         }
         else {
             console.log("error: " + req.status);
+            home1_visibility = false;
+            home_failed = true;
+
         }
     }
             req.send(JSON.stringify(datas));
