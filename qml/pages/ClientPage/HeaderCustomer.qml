@@ -22,6 +22,8 @@ ColumnLayout {
         Layout.preferredHeight: (1/3)*root.height
         Layout.fillHeight: true
         Layout.fillWidth: true
+        Layout.leftMargin: 0.02 * root.width
+        Layout.rightMargin: 0.02 * root.width
 
         Rectangle {
             Layout.preferredWidth: 0.1 * etat.width
@@ -53,7 +55,7 @@ ColumnLayout {
         }
 
         Rectangle {
-            Layout.preferredWidth: 0.2 * etat.width
+            Layout.preferredWidth: 0.1 * etat.width
             Layout.fillHeight: true
             color: "transparent"
             opacity : page == 2 || page == 3 ? 1 : 0
@@ -73,7 +75,6 @@ ColumnLayout {
                     }
                     else
                         console.log("invalid command")
-
                 }
             }
         }
@@ -85,12 +86,14 @@ ColumnLayout {
         spacing: 0
         Layout.fillWidth: true
         Layout.preferredHeight: (2/3) * root.height
+        Layout.leftMargin: 0.02 * root.width
+        Layout.rightMargin: 0.02 * root.width
 
         ColumnLayout {
             spacing: 0
             Layout.fillHeight: true
             Layout.fillWidth: true
-            Layout.preferredWidth: 0.8 * root.width
+            Layout.preferredWidth: 0.7 * root.width
 
             /* Police Station */
             RowLayout {
@@ -170,6 +173,9 @@ ColumnLayout {
                         color: "white"
                         font.family: "Californian FB"
                         font.pixelSize: Qt.application.font.pixelSize * 1.15
+                        horizontalAlignment: Text.AlignLeft
+                        leftPadding: 0.05 * parent.width
+
                     }
                 }
             }
@@ -181,28 +187,40 @@ ColumnLayout {
             Layout.fillHeight: true
             Layout.preferredWidth: 0.2 * root.width
 
-
             Rectangle {
                 Layout.fillHeight: true
                 Layout.fillWidth: true
                 color: "transparent"
 
-                Rectangle {
-                    anchors.centerIn: parent
-                    height: 2/3 * root.width > 0.15 * root.width ? width : 0.10 * root.width
-                    width: 2/3 * root.width > 0.15 * root.width ? 0.15 * root.width : height
-                    border.width: 1
-                    radius: 10
-                    border.color: "#26282a"
-                    color: clientPage.client_satisfaction ? "green" : "red"
+                RoundIcon {
+                    id : smiley
+                    anchors.verticalCenter: parent.verticalCenter
+                    anchors.right: parent.right
+                    iSize: 0.15 * root.width
+                    iImage: clientPage.client_satisfaction ? "../../../images/icon/smiley.png" : "../../../images/icon/smiley_sad.png"
+                    icolor: clientPage.client_satisfaction ? "green" : "red"
 
-                    Image {
-                        source: clientPage.client_satisfaction ? "../../../images/icon/smiley.png" : "../../../images/icon/smiley_sad.png"
-                        width: height
-                        height: 0.10 * etat.width
-                        fillMode: Image.PreserveAspectFit
-                        anchors.centerIn: parent
+                    SequentialAnimation on rotation{
+                        loops: 2
+                        running: smiley.visible
+                        NumberAnimation {
+                            from: 0; to: 20;
+                            duration: 80
+                        }
+                        NumberAnimation {
+                            from: 20; to: 0;
+                            duration: 80
+                        }
+                        NumberAnimation {
+                            from: 0; to: -20;
+                            duration: 80
+                        }
+                        NumberAnimation {
+                            from: -20; to: 0;
+                            duration: 80
+                        }
                     }
+
                 }
             }
         }

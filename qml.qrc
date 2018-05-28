@@ -180,5 +180,9 @@
         <file>qml/pages/MapPage/NewMap.qml</file>
         <file>qml/pages/MapPage/Marker.qml</file>
         <file>images/icon/chevron.png</file>
+        <file>qml/modules/RoundIcon.qml</file>
+        <file>images/map_icons/car_pin.png</file>
+        <file>images/map_icons/marker_blue.png</file>
+        <file>qml/pages/HomePage/Failed.qml</file>
     </qresource>
 </RCC>
