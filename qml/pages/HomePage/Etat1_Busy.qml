@@ -18,68 +18,59 @@ ColumnLayout {
 
     RowLayout {
         spacing: 0
-        Layout.preferredHeight: (7/12) * parent.height
+        Layout.preferredHeight: (1/4) * etat.height
         Layout.fillHeight: true
         Layout.fillWidth: true
 
         Rectangle {
             Layout.fillHeight: true
             Layout.fillWidth: true
-            color: "black"
-
-            Image {
-                id: failed
-                anchors.centerIn: parent
-                source: "../../../images/exclamation.png"
-                height: 1/2 * etat.height
-                fillMode: Image.PreserveAspectFit
-            }
-
-
+            //color: "red"
         }
     }
 
-
-    /* Button */
+    /* loader */
     RowLayout {
         spacing: 0
-        Layout.preferredHeight: (1/6)*parent.height
+        Layout.preferredHeight: (1/3) * etat.height
         Layout.fillHeight: true
         Layout.fillWidth: true
 
         Rectangle {
             Layout.fillHeight: true
             Layout.fillWidth: true
-            color: "black"
+            //color: "blue"
 
-            MyButton {
-                text : "Retour"
-                anchors.centerIn: parent
-                width: (1/2) * etat.width
-                height: (1/10) * etat.height
+                AnimatedImage {
+                    anchors.centerIn: parent
+                    id: animation;
+                    source: "../../../images/loader.gif"
+                height: parent.height
+                fillMode: Image.PreserveAspectFit
+                }
 
-                onClicked: {
-                    homePage.home_failed = false
-                    homePage.home1_visibility = true
+                Rectangle {
+                    property int frames: animation.frameCount
+
+                    width: 4; height: 8
+                    x: (animation.width - width) * animation.currentFrame / frames
+                    y: animation.height
                 }
             }
-        }
     }
 
 
-    /* Logo */
+    /* space filler */
     RowLayout {
         spacing: 0
-        Layout.preferredHeight: (1/4)*parent.height
+        Layout.preferredHeight: (5/12) * etat.height
         Layout.fillHeight: true
         Layout.fillWidth: true
 
         Rectangle {
             Layout.fillHeight: true
             Layout.fillWidth: true
-            color: "black"
-
-//            Logo {}
+            //color: colorMajor
         }
     }
 

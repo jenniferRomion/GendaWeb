@@ -21,13 +21,14 @@ Rectangle {
         Item {
             id: idItem
             anchors { left: parent.left; right: parent.right }
-            height: row.implicitHeight + 0.01 * mainPage.height
+            height: 1/16 * mainPage.height
 
             Row {
                 id: row
                 anchors { fill: parent; margins: 0.01 * parent.width }
 
                 Text {
+                    anchors.verticalCenter: parent.verticalCenter
                     width: 0.9 * parent.width
                     text: "<b>" + time + "</b>\t" + name + "\t" + rdv
                     font.family: "acumin-pro"
@@ -59,7 +60,7 @@ Rectangle {
         model : EventModel { id: idModel}
         delegate: idDelegate
 
-        highlight: Rectangle { color: colorMajor ; radius : 4 }
+        highlight: Rectangle { color: colorMajor ; radius : 20 }
         focus: true
         onCurrentItemChanged: {
                         clientName = idModel.get(idListView.currentIndex).name

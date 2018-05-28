@@ -15,14 +15,14 @@ function httpRequestPost(uri, datas) {
 
 //            MyContext.saveUser(JSON.stringify(result.user.id), JSON.stringify(result.user.username), mdp.text, JSON.stringify(result.user.mail))
 
-            home1_visibility = false;
+            home1_busy_visibility = false;
             home2_visibility = true;
 
         }
         else {
             console.log("error: " + req.status);
-            home1_visibility = false;
-            home_failed = true;
+            home1_busy_visibility = false;
+            home1_failed_visibility = true;
 
         }
     }

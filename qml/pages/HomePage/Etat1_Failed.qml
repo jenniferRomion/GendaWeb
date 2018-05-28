@@ -18,7 +18,7 @@ ColumnLayout {
 
     RowLayout {
         spacing: 0
-        Layout.preferredHeight: (1/4)*parent.height
+        Layout.preferredHeight: (1/4) * etat.height
         Layout.fillHeight: true
         Layout.fillWidth: true
 
@@ -27,16 +27,16 @@ ColumnLayout {
             Layout.fillWidth: true
             color: "white"
 
-            TextBox {
-                text : "Nom/logo de l'Application"
-            }
+            //            TextBox {
+            //                text : "Nom/logo de l'Application"
+            //            }
         }
     }
 
     /* Input */
     RowLayout {
         spacing: 0
-        Layout.preferredHeight: (1/3)*parent.height
+        Layout.preferredHeight: (1/3) * etat.height
         Layout.fillHeight: true
         Layout.fillWidth: true
 
@@ -48,70 +48,55 @@ ColumnLayout {
             Rectangle {
                 Layout.fillHeight: true
                 Layout.fillWidth: true
+                Layout.preferredHeight: (2/9) * etat.height
                 //color: "lightGrey"
 
-                InputBox {
-                    id : username
-                    placeholderText: "Entrer votre identifiant"
-
-                    width : 0.8 * etat.width
-                    anchors.bottom: parent.bottom
-                    anchors.horizontalCenter: parent.horizontalCenter
+                Image {
+                    anchors.centerIn: parent
+                    height: parent.height
+                    fillMode: Image.PreserveAspectFit
+                    source: "../../../images/exclamation.png"
                 }
             }
 
             Rectangle {
                 Layout.fillHeight: true
                 Layout.fillWidth: true
+                Layout.preferredHeight: (1/9) * etat.height
                 //color: "red"
 
-                InputBox {
-                    id : password
-                    placeholderText: "Entrer votre mot de passe"
-                    echoMode: TextInput.Password
-
+                TextBox {
                     width : 0.8 * etat.width
-                    anchors.top : parent.top
-                    anchors.horizontalCenter: parent.horizontalCenter
-
+                    anchors.centerIn: parent
+                    text: "Erreur d'authentification"
                 }
             }
 
         }
     }
 
+
     /* Button */
     RowLayout {
         spacing: 0
-        Layout.preferredHeight: (1/6)*parent.height
+        Layout.preferredHeight: (1/6) * etat.height
         Layout.fillHeight: true
         Layout.fillWidth: true
 
         Rectangle {
             Layout.fillHeight: true
             Layout.fillWidth: true
-            //color: "lightBlue"
+            //color: colorMajor
 
             MyButton {
-                text : "Se connecter"
+                text : "Retour"
                 anchors.centerIn: parent
                 width: (1/2) * etat.width
                 height: (1/10) * etat.height
 
                 onClicked: {
-                    console.log("connexion")
-                    homePage.home1_visibility = false
-//                    homePage.home2_visibility = true
-
-                    homePage.home1_busy_visibility = true
-
-                    var uri = "http://localhost:55281/Account/LoginAppMobile";
-                    var datas = {
-                        Username : username.text,
-                        Password : password.text }
-
-                    HttpScript.httpRequestPost(uri, datas)
-
+                    homePage.home1_failed_visibility = false
+                    homePage.home1_visibility = true
                 }
             }
         }
@@ -128,9 +113,9 @@ ColumnLayout {
         Rectangle {
             Layout.fillHeight: true
             Layout.fillWidth: true
-            color: "white"
+            //color: colorMajor
 
-            Logo {}
+            //            Logo {}
         }
     }
 

@@ -10,13 +10,14 @@ Rectangle {
         Item {
             id: idItem
             anchors { left: parent.left; right: parent.right }
-            height: row.implicitHeight + 0.01 * mainPage.height
+            height: 1/16 * mainPage.height
 
             Row {
                 id: row
                 anchors { fill: parent; margins: 0.01 * parent.width }
 
                 Text {
+                    anchors.verticalCenter: parent.verticalCenter
                     width: parent.width
                     text: name
                     font.family: "acumin-pro"
@@ -38,7 +39,7 @@ Rectangle {
         model : RingModel {}
         delegate: idDelegate
 
-        highlight: Rectangle { color: colorMajor ; radius : 4 }
+        highlight: Rectangle { color: colorMajor ; radius : 20 }
         focus: true
         onCurrentItemChanged: {
             //console.log(model.get(idListView.currentIndex).name)

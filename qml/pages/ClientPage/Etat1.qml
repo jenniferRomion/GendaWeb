@@ -19,7 +19,7 @@ ColumnLayout {
         spacing: 0
         Layout.topMargin: 0.01 * mainPage.height
         Layout.preferredHeight: (1/8)*parent.height
-        Layout.fillHeight: true
+        //Layout.fillHeight: true
         Layout.fillWidth: true
         z : 3
 
@@ -101,14 +101,15 @@ ColumnLayout {
     /* Buttons */
     RowLayout {
         spacing: 0
-        Layout.preferredHeight: (1/10)*parent.height
-        Layout.fillHeight: true
+        Layout.preferredHeight: (1/8)*parent.height
+        //Layout.fillHeight: true
         Layout.fillWidth: true
         z : 3
 
         Rectangle {
             Layout.fillHeight: true
             Layout.fillWidth: true
+            color: colorMinor
 
             MyButton {
                 text: "Détails"

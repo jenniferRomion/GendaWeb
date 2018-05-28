@@ -30,20 +30,18 @@ DelegateModel {
             ColumnLayout {
                 id: column
 
-                anchors.fill: parent
+                anchors.centerIn: parent
                 Layout.fillHeight: true
                 Layout.fillWidth: true
                 Layout.preferredHeight: root.height
 
-                spacing: 0.02 * mainPage.height
-
+                /* icon & label & time */
                 RowLayout {
                     Layout.fillHeight: true
                     Layout.fillWidth: true
                     Layout.preferredHeight: (1/2) * root.height
                     Layout.leftMargin: 0.005 * mainPage.height
                     Layout.rightMargin: 0.005 * mainPage.height
-                    //Layout.preferredWidth:  root.width
 
                     spacing: 0
 
@@ -66,14 +64,13 @@ DelegateModel {
                     Rectangle {
                         Layout.fillHeight: true
                         Layout.preferredWidth: 0.3 * root.width
-                        //anchors.left: carIcon.right
                         color: "transparent"
 
                         TextBox {
                             id: itineraryChoice
                             text : "Via " + road
                             horizontalAlignment: Text.left
-                            bold: true                            
+                            bold: true
                         }
                     }
 
@@ -92,11 +89,11 @@ DelegateModel {
                     }
                 }
 
+                /* nb of clients & distance */
                 RowLayout {
                     Layout.fillHeight: true
                     Layout.fillWidth: true
                     Layout.preferredHeight: (1/2) * root.height
-                    //Layout.preferredWidth:  root.width
 
                     spacing: 0
 
@@ -116,16 +113,22 @@ DelegateModel {
                         Layout.fillHeight: true
                         Layout.fillWidth: true
                         Layout.preferredWidth: 0.3 * root.width
-                        //anchors.right: parent.right
                         color: "transparent"
 
                         TextBox {
                             text : distance + " km"
                             horizontalAlignment: Text.AlignRight
-                            color: "black"
                         }
                     }
                 }
+
+                Rectangle {
+                    Layout.fillHeight: true
+                    Layout.fillWidth: true
+                    Layout.preferredHeight: 0.005 * mainPage.height
+                    color: "darkgrey"
+                }
+
             }
         }
     }

@@ -13,11 +13,13 @@ ColumnLayout {
     Layout.fillHeight: true
     Layout.fillWidth: true
 
-    spacing: 0.02 * mainPage.height
+    spacing: 0
 
     RowLayout {
         spacing: 0
-        Layout.preferredHeight: (1/8)*etat.height
+        Layout.topMargin: 0.01 * mainPage.height
+        Layout.preferredHeight: (1/8)*parent.height
+        Layout.fillHeight: true
         Layout.fillWidth: true
         z: 3
 

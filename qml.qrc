@@ -188,6 +188,10 @@
         <file>qml/modules/RoundIcon.qml</file>
         <file>images/map_icons/car_pin.png</file>
         <file>images/map_icons/marker_blue.png</file>
-        <file>qml/pages/HomePage/Failed.qml</file>
+        <file>images/exclamation.png</file>
+        <file>images/animated.gif</file>
+        <file>qml/pages/HomePage/Etat1_Busy.qml</file>
+        <file>qml/pages/HomePage/Etat1_Failed.qml</file>
+        <file>images/loader.gif</file>
     </qresource>
 </RCC>
