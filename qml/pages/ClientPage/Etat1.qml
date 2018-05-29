@@ -19,7 +19,6 @@ ColumnLayout {
         spacing: 0
         Layout.topMargin: 0.01 * mainPage.height
         Layout.preferredHeight: (1/8)*parent.height
-        Layout.fillHeight: true
         Layout.fillWidth: true
         z : 3
 
@@ -29,11 +28,11 @@ ColumnLayout {
             Layout.preferredWidth: 0.10 * etat.width
             color: colorMinor
 
-            Image {
-                source : "../../../images/icon/clients.png"
+            ShadowIcon {
+                iconSrc: "../../../images/icon/clients.png"
                 height: 0.05 * mainPage.height
+                width: parent.width
                 anchors.centerIn: parent
-                fillMode: Image.PreserveAspectFit
             }
         }
 
@@ -47,6 +46,7 @@ ColumnLayout {
                 text : "Mes clients"
                 bold : true
                 horizontalAlignment: Text.AlignLeft
+                leftPadding: 0.05 * parent.width
             }
         }
 
@@ -101,14 +101,15 @@ ColumnLayout {
     /* Buttons */
     RowLayout {
         spacing: 0
-        Layout.preferredHeight: (1/10)*parent.height
-        Layout.fillHeight: true
+        Layout.preferredHeight: (1/8)*parent.height
+        //Layout.fillHeight: true
         Layout.fillWidth: true
         z : 3
 
         Rectangle {
             Layout.fillHeight: true
             Layout.fillWidth: true
+            color: colorMinor
 
             MyButton {
                 text: "Détails"

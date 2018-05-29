@@ -25,11 +25,11 @@ Button {
             Layout.preferredWidth: (1/10)*parent.width
             color: control.pressed ? "#C6AF90" : "white"
 
-            Image {
-                source : iconsrc
+            ShadowIcon {
+                iconSrc: iconsrc
                 height: 0.05 * mainPage.height
+                width: parent.width
                 anchors.centerIn: parent
-                fillMode: Image.PreserveAspectFit
             }
         }
 
@@ -43,6 +43,7 @@ Button {
                 text : title
                 bold : true
                 horizontalAlignment: Text.AlignLeft
+                leftPadding: 0.05 * parent.width
             }
         }
     }

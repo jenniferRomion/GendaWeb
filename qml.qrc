@@ -175,10 +175,24 @@
         <file>qml/pages/ClientPage/Etat3_Squad.qml</file>
         <file>qml/pages/ClientPage/Etat3_Client.qml</file>
         <file>qml/pages/ClientPage/Etat4_Squad.qml</file>
+        <file>images/black-background.jpg</file>
+        <file>qml/pages/ConfigurationPage/PopupCopyrights.qml</file>
+        <file>qml/pages/ConfigurationPage/BackgroundCopyrights.qml</file>
+        <file>images/icon/afpa.png</file>
+        <file>images/icon/Qt_Creator.png</file>
         <file>qml/pages/ClientPage/Etat4_Client.qml</file>
         <file>images/map_icons/marker.png</file>
         <file>qml/pages/MapPage/NewMap.qml</file>
         <file>qml/pages/MapPage/Marker.qml</file>
         <file>images/icon/chevron.png</file>
+        <file>qml/modules/RoundIcon.qml</file>
+        <file>images/map_icons/car_pin.png</file>
+        <file>images/map_icons/marker_blue.png</file>
+        <file>images/exclamation.png</file>
+        <file>images/animated.gif</file>
+        <file>qml/pages/HomePage/Etat1_Busy.qml</file>
+        <file>qml/pages/HomePage/Etat1_Failed.qml</file>
+        <file>images/loader.gif</file>
+        <file>qml/modules/ShadowIcon.qml</file>
     </qresource>
 </RCC>

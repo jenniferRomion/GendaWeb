@@ -10,8 +10,7 @@ Button {
 
         Image {
             source: "../../images/icon/delete.png"
-
-            height: parent.height
+            height: 0.8 * parent.height
             fillMode: Image.PreserveAspectFit
             anchors.centerIn: parent
         }

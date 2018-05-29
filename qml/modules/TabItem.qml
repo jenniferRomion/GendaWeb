@@ -2,6 +2,8 @@ import QtQuick 2.9
 import QtQuick.Controls 2.2
 import QtQuick.Layouts 1.1
 import QtQuick.Controls.Styles 1.2
+import QtGraphicalEffects 1.0
+
 
 TabButton {
 
@@ -15,7 +17,9 @@ TabButton {
             GradientStop { position: 1 ; color: root.currentIndex == index ? "white" : colorMajor }
         }
     }
+
     Image {
+        id: img
         source: imgsource
 
         height: (1/10) * mainPage.height
@@ -25,5 +29,15 @@ TabButton {
         anchors.verticalCenter: parent.verticalCenter
         anchors.horizontalCenter: parent.horizontalCenter
 
+    }
+
+    DropShadow {
+        anchors.fill : img
+        horizontalOffset: 3
+        verticalOffset: 3
+        radius: 8.0
+        samples: 17
+        color: "#80000000"
+        source: img
     }
 }

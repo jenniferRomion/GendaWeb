@@ -18,6 +18,7 @@ DelegateModel {
             id : root
             width: parent.width
             height: 1/6 * mainPage.height
+            //anchors.horizontalCenter: mainPage.horizontalCenter
 
             MouseArea {
                 id : mouseDelegate
@@ -30,20 +31,21 @@ DelegateModel {
             ColumnLayout {
                 id: column
 
-                anchors.fill: parent
+                anchors.centerIn: parent
                 Layout.fillHeight: true
                 Layout.fillWidth: true
                 Layout.preferredHeight: root.height
 
-                spacing: 0.02 * mainPage.height
+                Layout.leftMargin: 0.005 * mainPage.height
+                Layout.rightMargin: 0.005 * mainPage.height
 
+                spacing : 0
+
+                /* icon & label & time */
                 RowLayout {
                     Layout.fillHeight: true
                     Layout.fillWidth: true
                     Layout.preferredHeight: (1/2) * root.height
-                    Layout.leftMargin: 0.005 * mainPage.height
-                    Layout.rightMargin: 0.005 * mainPage.height
-                    //Layout.preferredWidth:  root.width
 
                     spacing: 0
 
@@ -53,27 +55,25 @@ DelegateModel {
                         Layout.preferredWidth: 0.2 * root.width
                         color: "transparent"
 
-                        Image {
-                            width: height
+                        ShadowIcon {
+                            iconSrc: "../../../images/icon/car.png"
                             height: 0.05 * mainPage.height
-                            source: "../../../images/icon/car.png"
-                            fillMode: Image.PreserveAspectFit
-
+                            width: height
                             anchors.centerIn: parent
                         }
                     }
 
                     Rectangle {
                         Layout.fillHeight: true
-                        Layout.preferredWidth: 0.3 * root.width
-                        //anchors.left: carIcon.right
+                        Layout.preferredWidth: 0.4 * root.width
                         color: "transparent"
 
                         TextBox {
                             id: itineraryChoice
                             text : "Via " + road
                             horizontalAlignment: Text.left
-                            bold: true                            
+                            leftPadding: 0.05 * parent.width
+                            bold: true
                         }
                     }
 
@@ -86,29 +86,30 @@ DelegateModel {
                         TextBox {
                             text : time + " min"
                             horizontalAlignment: Text.AlignRight
-                            color: "limegreen"
-
+                            rightPadding: 0.05 * parent.width
                         }
                     }
                 }
 
+                /* nb of clients & distance */
                 RowLayout {
                     Layout.fillHeight: true
                     Layout.fillWidth: true
                     Layout.preferredHeight: (1/2) * root.height
-                    //Layout.preferredWidth:  root.width
 
                     spacing: 0
 
                     Rectangle {
                         Layout.fillHeight: true
                         Layout.fillWidth: true
-                        Layout.preferredWidth: 0.6 * root.width
+                        Layout.preferredWidth: 0.7 * root.width
                         color: "transparent"
 
                         TextBox {
-                            text : clients + " clients sur le trajet"
+                            text : clients + " client(s) sur le trajet"
                             color: "red"
+                            horizontalAlignment: Text.left
+                            leftPadding: 0.05 * parent.width
                         }
                     }
 
@@ -116,16 +117,23 @@ DelegateModel {
                         Layout.fillHeight: true
                         Layout.fillWidth: true
                         Layout.preferredWidth: 0.3 * root.width
-                        //anchors.right: parent.right
                         color: "transparent"
 
                         TextBox {
                             text : distance + " km"
                             horizontalAlignment: Text.AlignRight
-                            color: "black"
+                            rightPadding: 0.05 * parent.width
                         }
                     }
                 }
+
+                Rectangle {
+                    Layout.fillHeight: true
+                    Layout.fillWidth: true
+                    Layout.preferredHeight: 0.005 * mainPage.height
+                    color: "darkgrey"
+                }
+
             }
         }
     }

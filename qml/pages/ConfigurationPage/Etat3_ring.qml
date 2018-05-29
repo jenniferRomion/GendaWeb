@@ -75,7 +75,7 @@ ColumnLayout {
     RowLayout {
         spacing: 0
         Layout.topMargin: 0.01 * mainPage.height
-        Layout.preferredHeight: (3/8)*parent.height
+        Layout.preferredHeight: (4/8)*parent.height
         Layout.fillHeight: true
         Layout.fillWidth: true
         z : 0
@@ -97,7 +97,7 @@ ColumnLayout {
     /* Selected */
     RowLayout {
         spacing: 0
-        Layout.preferredHeight: (3/8)*parent.height
+        Layout.preferredHeight: (2/8)*parent.height
         Layout.fillHeight: true
         Layout.fillWidth: true
         z : 3
