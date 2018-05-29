@@ -105,12 +105,17 @@ ColumnLayout {
 
                     homePage.home1_busy_visibility = true
 
-                    var uri = "http://localhost:55281/Account/LoginAppMobile";
-                    var datas = {
-                        Username : username.text,
-                        Password : password.text }
+//                    var uri = "http://localhost:55281/Account/LoginAppMobile";
+//                    var datas = {
+//                        Username : username.text,
+//                        Password : password.text }
 
-                    HttpScript.httpRequestPost(uri, datas)
+   //                 HttpScript.httpRequestPost(uri, datas)
+
+                    var uri = "http://modern.clconseils.fr/odata/int_prospects?all=true&$top=10";
+
+                    HttpScript.httpRequestGet(uri)
+
 
                 }
             }

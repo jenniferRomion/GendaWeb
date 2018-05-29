@@ -34,16 +34,17 @@ function httpRequestGet(uri) {
     var req = new XMLHttpRequest();
 
     req.open("GET", uri, true);
+    req.setRequestHeader('Content-type','application/json; charset=utf-8');
 
     req.onreadystatechange = function() {
 
-        if (req.readyState === XMLHttpRequest.DONE && req.status == 200) {
+        if (req.readyState === XMLHttpRequest.req.status && req.status == 200) {
             console.log("#" + req.responseText);
         }
         else {
             console.log("error: " + req.status);
         }
     }
-    req.send();
+    req.send(null);
 }
 
