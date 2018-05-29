@@ -111,7 +111,7 @@ ColumnLayout {
         Rectangle {
             Layout.fillHeight: true
             Layout.fillWidth: true
-            //color: "lightGrey"
+            color: colorMinor
 
             MyButton {
                 text : "Rendez-vous"
@@ -130,7 +130,7 @@ ColumnLayout {
         Rectangle {
             Layout.fillHeight: true
             Layout.fillWidth: true
-            //color: "lightGrey"
+            color: colorMinor
 
             MyButton {
                 text : "Visiter"

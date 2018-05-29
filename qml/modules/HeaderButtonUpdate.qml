@@ -22,11 +22,10 @@ Button {
             GradientStop { position: 1 ; color: colorMajor }
         }
 
-
         Image {
             anchors.centerIn: parent
             source : "../../../images/icon/update.png"
-            height: 0.10 * etat.width
+            height: 0.6 * control.height
             fillMode: Image.PreserveAspectFit
         }
     }

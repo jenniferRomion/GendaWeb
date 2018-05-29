@@ -31,11 +31,10 @@ ColumnLayout {
             Layout.fillWidth: true
             color: "transparent"
 
-            Image {
-                source: clientPage.client_gendarme ? "../../../images/icon/gendarme_gris.png" : "../../../images/icon/user.png"
-                width: height
+            ShadowIcon {
+                iconSrc: clientPage.client_gendarme ? "../../../images/icon/gendarme_gris.png" : "../../../images/icon/user.png"
                 height: 0.10 * etat.width
-                fillMode: Image.PreserveAspectFit
+                width: height
                 anchors.centerIn: parent
             }
         }
@@ -107,11 +106,10 @@ ColumnLayout {
                     color: "transparent"
                     opacity: clientPage.client_gendarme ? 1 : 0
 
-                    Image {
-                        source: "../../../images/icon/gendflam.png"
-                        width: height
+                    ShadowIcon {
+                        iconSrc: "../../../images/icon/gendflam.png"
                         height: 0.10 * etat.width
-                        fillMode: Image.PreserveAspectFit
+                        width: height
                         anchors.centerIn: parent
                     }
                 }
@@ -125,7 +123,10 @@ ColumnLayout {
                     TextBox {
                         text: clientPage.squadName
                         color: "white"
-                        anchors.centerIn: parent
+                        font.pixelSize: Qt.application.font.pixelSize * 1.15
+                        horizontalAlignment: Text.AlignLeft
+                        leftPadding: 0.05 * parent.width
+
                     }
                 }
 
@@ -154,11 +155,10 @@ ColumnLayout {
                     Layout.fillHeight: true
                     color: "transparent"
 
-                    Image {
-                        source: "../../../images/icon/marker.png"
-                        width: height
+                    ShadowIcon {
+                        iconSrc: "../../../images/icon/marker.png"
                         height: 0.10 * etat.width
-                        fillMode: Image.PreserveAspectFit
+                        width: height
                         anchors.centerIn: parent
                     }
                 }
@@ -175,7 +175,6 @@ ColumnLayout {
                         font.pixelSize: Qt.application.font.pixelSize * 1.15
                         horizontalAlignment: Text.AlignLeft
                         leftPadding: 0.05 * parent.width
-
                     }
                 }
             }

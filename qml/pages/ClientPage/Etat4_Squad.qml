@@ -85,6 +85,7 @@ ColumnLayout {
         Rectangle {
             Layout.fillHeight: true
             Layout.fillWidth: true
+            color: colorMinor
 
             MyButton {
                 anchors.centerIn: parent

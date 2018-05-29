@@ -12,19 +12,19 @@ ColumnLayout {
     anchors.fill: parent
     Layout.fillHeight: true
     Layout.fillWidth: true
+    spacing : 0
 
     /* Display */
     RowLayout {
-        spacing: 0
         Layout.topMargin: 0.01 * mainPage.height
         Layout.preferredHeight: (1/8)*parent.height
-        Layout.fillHeight: true
         Layout.fillWidth: true
+        spacing: 0
 
         Rectangle {
             Layout.fillHeight: true
             Layout.fillWidth: true
-            color: "red"
+            //color: "red"
 
             ConfigItem {
                 width: parent.width

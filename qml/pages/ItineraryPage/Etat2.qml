@@ -20,7 +20,6 @@ ColumnLayout {
         spacing: 0
         Layout.topMargin: 0.01 * mainPage.height
         Layout.preferredHeight: (1/8)*parent.height
-        Layout.fillHeight: true
         Layout.fillWidth: true
 
         Rectangle {
@@ -29,11 +28,11 @@ ColumnLayout {
             Layout.preferredWidth: 0.10 * etat.width
             color: colorMinor
 
-            Image {
-                source : "../../../images/icon/itinerary.png"
+            ShadowIcon {
+                iconSrc: "../../../images/icon/itinerary.png"
                 height: 0.05 * mainPage.height
+                width: parent.width
                 anchors.centerIn: parent
-                fillMode: Image.PreserveAspectFit
             }
         }
 
@@ -47,6 +46,7 @@ ColumnLayout {
                 text : "Nouvelle destination"
                 bold : true
                 horizontalAlignment: Text.AlignLeft
+                leftPadding: 0.05 * parent.width
             }
         }
 
@@ -58,7 +58,6 @@ ColumnLayout {
 
             HeaderButtonReturn {
                 onClicked: {
-                    console.log("ok")
                     itineraryPage.itinerary2_visibility = false
                     itineraryPage.itinerary1_visibility = true
                 }
@@ -123,7 +122,7 @@ ColumnLayout {
         Rectangle {
             Layout.fillHeight: true
             Layout.fillWidth: true
-            //color: "lightGrey"
+            color: colorMinor
 
             MyButton {
                 text : "Rechercher"

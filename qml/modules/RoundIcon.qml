@@ -28,8 +28,8 @@ Rectangle {
 
             anchors.centerIn: parent
 
-            height: parent.height - (0.01 * parent.height)
-            width: height
+            height: sourceSize.height > sourceSize.width ? parent.height - (0.01 * parent.height) : width
+            width : sourceSize.height > sourceSize.width - (0.01 * parent.width) ? height : parent.width
 
             fillMode: Image.PreserveAspectFit
 

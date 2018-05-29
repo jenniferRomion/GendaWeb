@@ -12,6 +12,11 @@ Rectangle {
             anchors { left: parent.left; right: parent.right }
             height: 1/16 * mainPage.height
 
+            MouseArea {
+                anchors.fill: parent
+                onClicked: idListView.currentIndex = index
+            }
+
             Row {
                 id: row
                 anchors { fill: parent; margins: 0.01 * parent.width }
@@ -22,11 +27,6 @@ Rectangle {
                     text: name
                     font.family: "acumin-pro"
                     font.pixelSize: Qt.application.font.pixelSize * 1.25
-
-                    MouseArea {
-                        anchors.fill: parent
-                        onClicked: idListView.currentIndex = index
-                    }
                 }
             }
         }

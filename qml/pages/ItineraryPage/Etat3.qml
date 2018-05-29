@@ -48,6 +48,7 @@ ColumnLayout {
 
             MyList{
                 id: listItineraries
+                anchors.horizontalCenter: parent.horizontalCenter
 
                 function f(){
                     itineraryPage.roadSelected = idItenerary.model.get(listItineraries.currentIndex).road;
@@ -78,7 +79,7 @@ ColumnLayout {
             color: colorMinor
 
             MyButton {
-                text : "Sélectionner" // réinitialiser ?
+                text : "Valider" // réinitialiser ?
                 anchors.centerIn: parent
                 width: (1/3) * etat.width
                 height: (1/10) * etat.height

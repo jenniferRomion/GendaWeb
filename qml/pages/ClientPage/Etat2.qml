@@ -54,6 +54,7 @@ ColumnLayout {
         }
     }
 
+    /* Buttons */
     RowLayout {
         spacing: 0
         Layout.preferredHeight: (1/8)*parent.height
@@ -63,7 +64,7 @@ ColumnLayout {
         Rectangle {
             Layout.fillHeight: true
             Layout.fillWidth: true
-            //color: "lightGrey"
+            color: colorMinor
 
             MyButton {
                 text : "Contacter"
@@ -81,7 +82,7 @@ ColumnLayout {
         Rectangle {
             Layout.fillHeight: true
             Layout.fillWidth: true
-            //color: "lightGrey"
+            color: colorMinor
 
             MyButton {
                 text : "Visiter"

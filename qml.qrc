@@ -193,5 +193,6 @@
         <file>qml/pages/HomePage/Etat1_Busy.qml</file>
         <file>qml/pages/HomePage/Etat1_Failed.qml</file>
         <file>images/loader.gif</file>
+        <file>qml/modules/ShadowIcon.qml</file>
     </qresource>
 </RCC>

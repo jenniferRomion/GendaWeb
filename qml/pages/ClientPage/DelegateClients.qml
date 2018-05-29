@@ -2,9 +2,9 @@ import QtQuick 2.9
 import QtQuick.Controls 2.2
 import QtQuick.Layouts 1.1
 import QtQuick.Controls.Styles 1.2
+import QtQml.Models 2.2
 
 import "../../modules"
-import QtQml.Models 2.2
 
 DelegateModel {
 
@@ -22,12 +22,11 @@ DelegateModel {
                 id: row
                 anchors { fill: parent; margins: 0.01 * parent.width }
 
-
-                Image {
-                    source: gendarme ? "../../../images/icon/gendarme.png" : "../../../images/icon/user.png"
+                ShadowIcon {
+                    iconSrc: gendarme ? "../../../images/icon/gendarme.png" : "../../../images/icon/user.png"
                     height: parent.height
                     width: 0.1 * parent.width
-                    fillMode: Image.PreserveAspectFit
+
                 }
 
                 Text {

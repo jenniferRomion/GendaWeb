@@ -26,7 +26,7 @@ Button {
         Image {
             anchors.centerIn: parent
             source : "../../../images/icon/chevron.png"
-            height: 0.10 * etat.width
+            height: 0.6 * control.height
             fillMode: Image.PreserveAspectFit
         }
     }

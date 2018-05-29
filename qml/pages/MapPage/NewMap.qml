@@ -20,8 +20,12 @@ Item  {
 
     PositionSource {
         id: positionSource
+        active:  true //activation dynamique a mettre en place
+        updateInterval: 1000
+
         onPositionChanged: {
             map.center = position.coordinate
+            carMarker.coordinate = position.coordinate
             console.log("move : " + position.coordinate)
         }
     }
@@ -34,7 +38,7 @@ Item  {
         anchors.fill : parent
         plugin: mapPlugin
         center: QtPositioning.coordinate(48.8584, 2.2945) // Tour Eiffel
-        zoomLevel: 10
+        zoomLevel: 15
 
         MapQuickItem {
             id: carMarker

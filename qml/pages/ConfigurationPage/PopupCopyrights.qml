@@ -22,6 +22,6 @@ Popup {
         width: (3/4) * configPage.width
         height: 0.9 * configPage.height
     }
-    closePolicy: Popup.CloseOnEscape | Popup.CloseOnPressOutsideParent
+    closePolicy: Popup.CloseOnEscape | Popup.CloseOnPressOutside
 }
 

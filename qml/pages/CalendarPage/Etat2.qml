@@ -12,7 +12,6 @@ ColumnLayout {
     anchors.fill: parent
     Layout.fillHeight: true
     Layout.fillWidth: true
-
     spacing: 0
 
     /* Header */
@@ -20,7 +19,6 @@ ColumnLayout {
         spacing: 0
         Layout.topMargin: 0.01 * mainPage.height
         Layout.preferredHeight: (1/8)*parent.height
-        Layout.fillHeight: true
         Layout.fillWidth: true
 
         Rectangle {
@@ -29,12 +27,18 @@ ColumnLayout {
             Layout.preferredWidth: 0.10 * etat.width
             color: colorMinor
 
-            Image {
-                source : "../../../images/icon/pin.png"
+            ShadowIcon {
+                iconSrc: "../../../images/icon/pin.png"
                 height: 0.05 * mainPage.height
+                width: parent.width
                 anchors.centerIn: parent
-                fillMode: Image.PreserveAspectFit
             }
+//            Image {
+//                source : "../../../images/icon/pin.png"
+//                height: 0.05 * mainPage.height
+//                anchors.centerIn: parent
+//                fillMode: Image.PreserveAspectFit
+//            }
         }
 
         Rectangle {
@@ -46,6 +50,7 @@ ColumnLayout {
             TextBox {
                 bold : true
                 horizontalAlignment: Text.AlignLeft
+                leftPadding: 0.05 * parent.width
                 text: Qt.locale().standaloneDayName(calendarPage.currentDate.getDay(), Locale.LongFormat)
                       + " "
                       + calendarPage.currentDate.getDate()

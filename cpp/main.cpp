@@ -21,6 +21,8 @@ int main(int argc, char *argv[])
     QtWebView::initialize();
     //! [0]
 
+    app.setWindowIcon(QIcon("../images/logo_clconseils.png"));
+
     QGuiApplication::setApplicationDisplayName(QCoreApplication::translate("main", "QtWebView Example"));
     QCoreApplication::setApplicationVersion(QT_VERSION_STR);
 

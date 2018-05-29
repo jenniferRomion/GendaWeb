@@ -29,11 +29,10 @@ ColumnLayout {
             Layout.fillWidth: true
             color: "transparent"
 
-            Image {
-                source: "../../../images/icon/gendflam.png"
-                width: height
+            ShadowIcon {
+                iconSrc: "../../../images/icon/gendflam.png"
                 height: 0.10 * etat.width
-                fillMode: Image.PreserveAspectFit
+                width: height
                 anchors.centerIn: parent
             }
         }
@@ -45,7 +44,7 @@ ColumnLayout {
             color: "transparent"
 
             TextBox {
-                text: clientPage.squadName
+                text: clientPage.squadName.toUpperCase()
                 bold : true
                 color: "white"
                 anchors.centerIn: parent
@@ -92,11 +91,10 @@ ColumnLayout {
             Layout.fillHeight: true
             color: "transparent"
 
-            Image {
-                source: "../../../images/icon/marker.png"
-                width: height
+            ShadowIcon {
+                iconSrc: "../../../images/icon/marker.png"
                 height: 0.10 * etat.width
-                fillMode: Image.PreserveAspectFit
+                width: height
                 anchors.centerIn: parent
             }
         }
@@ -111,6 +109,8 @@ ColumnLayout {
                 color: "white"
                 font.family: "Californian FB"
                 font.pixelSize: Qt.application.font.pixelSize * 1.15
+                horizontalAlignment: Text.AlignLeft
+                leftPadding: 0.05 * parent.width
             }
         }
     }
